@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="PrimeX Auto Detailing — a premium automotive care website concept based in Malta."
+        name="description" />
+    <title>Home | PrimeX Auto Detailing</title>
+    <link href="css/maincss.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="home-page"><a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header"><a aria-label="PrimeX Auto Detailing home" class="logo" href="index.html"><span
+                class="logo-name">JD<span class="logo-x">AUTO</span></span><span class="logo-subtitle">DETAILING STUDIO</span></a><button aria-controls="main-nav" aria-expanded="false" aria-label="Open navigation"
+            class="menu-toggle" type="button"><span></span><span></span><span></span></button>
+        <nav aria-label="Main navigation" class="main-nav" id="main-nav"><a aria-current="page" class="active"
+                href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="services.html">SERVICES</a>
+            <a href="gallery.html">GALLERY</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </header>
+    <main id="main-content">
+        <section class="hero hero-minimal">
+            <div class="hero-content">
+                <h1>Precision in Every Detail.</h1>
+                <!-- <p class="hero-description">Exceptional automotive care, refined down to the smallest detail.</p> -->
+            </div>
+            <div aria-hidden="false" class="hero-image"><img alt="Luxury sports car, photographed in dramatic low light"
+                    fetchpriority="high"
+                    src="images/hero-bg.png" />
+            </div>
+
+
+            <div aria-label="Automotive marques admired by enthusiasts" class="hero-marques">
+                <p>FOR THE CARS WE LOVE</p>
+                <ul aria-label="Car marques">
+                    <li class="marque-bmw">BMW</li>
+                    <li class="marque-amg">AMG</li>
+                    <li class="marque-audi">AUDI</li>
+                    <li class="marque-porsche">PORSCHE</li>
+                    <li class="marque-mercedes">Mercedes-Benz</li>
+                    <li class="marque-tesla">TESLA</li>
+                </ul>
+                <span class="marques-note">Independent detailing concept · Not affiliated with the marques shown</span>
+            </div>
+        </section>
+        
+<section class="services-editorial" id="services">
+    <div class="services-editorial-image">
+        <img
+            src="images/services-feature.png"
+            alt="Close-up of a professionally detailed car"
+            loading="lazy"
+        >
+    </div>
+
+    <div class="services-editorial-content">
+        <h2>The art of detailing.</h2>
+
+        <p class="services-editorial-intro">
+            Specialist care for every finish.
+        </p>
+
+        <div class="services-editorial-list">
+
+            <a href="services.html#paint-correction" class="editorial-service">
+                <span class="service-name">Paint Correction</span>
+            </a>
+
+            <a href="services.html#interior-detailing" class="editorial-service">
+                <span class="service-name">Interior Detailing</span>
+            </a>
+
+            <a href="services.html#ceramic-coating" class="editorial-service">
+                <span class="service-name">Ceramic Coating</span>
+            </a>
+
+            <a href="services.html#exterior-detailing" class="editorial-service">
+                <span class="service-name">Exterior Detailing</span>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+        <section aria-labelledby="difference-title" class="difference-section">
+            <div class="difference-heading">
+                <div>
+                    <p class="eyebrow">THE DIFFERENCE</p>
+                    <h2 id="difference-title">See it before you book.</h2>
+                    <p class="difference-intro">Explore the kind of transformation careful detailing can make. Drag the
+                        divider to compare.</p>
+                </div>
+                <div aria-label="Choose a detailing example" class="difference-filters" role="group">
+                    <button aria-pressed="true" class="difference-filter is-selected" data-example="exterior"
+                        type="button">Exterior</button>
+                    <button aria-pressed="false" class="difference-filter" data-example="interior"
+                        type="button">Interior</button>
+                    <button aria-pressed="false" class="difference-filter" data-example="coating"
+                        type="button">Coating</button>
+                </div>
+            </div>
+            <div class="comparison" id="primex-comparison" style="--split:50%">
+                <img alt="AI-generated polished black sports coupe after detailing" class="comparison-after" id="comparison-after"
+                    loading="lazy"
+                    src="images/exterior-after.png" />
+                <div aria-hidden="true" class="comparison-before">
+                    <img alt="" id="comparison-before"
+                        src="images/exterior-before.png" />
+                </div>
+                <span class="comparison-label comparison-label-before">BEFORE</span>
+                <span class="comparison-label comparison-label-after">AFTER</span>
+                <div aria-hidden="true" class="comparison-divider"><span class="comparison-knob">‹   ›</span></div>
+                <label class="visually-hidden" for="comparison-range">Reveal more of the before or after image</label>
+                <input aria-describedby="comparison-disclaimer" class="comparison-range" id="comparison-range" max="100"
+                    min="0" type="range" value="50" />
+            </div>
+            <div class="difference-bottom">
+                <p id="comparison-caption"><strong>Exterior detailing</strong> — AI-generated visual comparison</p>
+                <a class="text-link" href="gallery.html">VIEW OUR GALLERY →</a>
+            </div>
+            <p class="difference-disclaimer" id="comparison-disclaimer">AI-generated illustrative before-and-after comparison. Not an actual customer result.</p>
+        </section>
+        <section aria-labelledby="process-title" class="section-block process-section">
+            <div class="section-heading">
+                <p class="eyebrow">THE EXPERIENCE</p>
+                <h2 id="process-title">A considered process. Every time.</h2>
+                <p>From the first conversation to the final inspection, we focus on the details.</p>
+            </div>
+            <div class="process-grid">
+                <article><span>01 /</span>
+                    <h3>Tell us about your car</h3>
+                    <p>Choose the service you have in mind and describe the finish you want.</p>
+                </article>
+                <article><span>02 /</span>
+                    <h3>Choose your treatment</h3>
+                    <p>Explore interior, exterior, paint correction and coating options.</p>
+                </article>
+                <article><span>03 /</span>
+                    <h3>See the difference</h3>
+                    <p>Careful preparation and finishing, with attention to every surface.</p>
+                </article>
+            </div>
+        </section>
+        <section class="section-block why-section">
+            <div class="section-heading">
+                <p class="eyebrow">WHY PRIMEX</p>
+                <h2>Done properly, not just washed.</h2>
+            </div>
+            <div class="why-grid">
+                <article><span aria-hidden="true">✧</span>
+                    <h3>Purposeful products</h3>
+                    <p>Detailing products and processes chosen with each surface in mind.</p>
+                </article>
+                <article><span aria-hidden="true">◎</span>
+                    <h3>Attention to detail</h3>
+                    <p>Thoughtful preparation, careful application and a considered finish.</p>
+                </article>
+                <article><span aria-hidden="true">◇</span>
+                    <h3>Clear communication</h3>
+                    <p>Understand the service and what it is designed to achieve.</p>
+                </article>
+            </div>
+        </section>
+        <section class="statement-section">
+            <p class="eyebrow">THE PRIMEX APPROACH</p>
+            <h2>Care you can see.<br /><em>Craftsmanship you can feel.</em></h2>
+            <p>From the first wash to the final inspection, every detail matters.</p><a class="text-link"
+                href="about.html">DISCOVER OUR STORY →</a>
+        </section>
+        <section class="cta-section">
+            <p class="eyebrow">READY FOR A FRESH FINISH?</p>
+            <h2>Your Vehicle Deserves Better.</h2>
+            <p>Experience the PrimeX standard of automotive care.</p><a class="btn btn-primary" href="contact.html">GET
+                IN TOUCH →</a>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div><a class="footer-brand" href="index.html">JD<span>AUTO</span></a>
+            <p>Precision in Every Detail.</p>
+        </div>
+        <div class="footer-links"><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a
+                href="contact.html">Contact</a></div>
+        <p class="footer-note">© 2026 JD Auto Detailing Studio · Concept website </p>
+    </footer>
+    <script defer="" src="js/difference.js"></script>
+    <script defer="" src="js/site.js"></script>
+    <script defer src="js/nav-scroll.js"></script>
+</body>
+
+</html>
