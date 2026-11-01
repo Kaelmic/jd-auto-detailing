@@ -1,0 +1,522 @@
+/* JD AUTO — RESPONSIVE STYLES
+   Load this file AFTER maincss.css.
+   Original media queries are retained in their original relative order.
+*/
+
+@media (max-width: 700px) {
+    .site-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 700px) {
+    .hero {
+        padding: 25px 6% 50px;
+    }
+
+    .hero-image {
+        height: 260px;
+    }
+
+    .hero-content {
+        margin-top: 30px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+}
+
+@media(max-width:1100px) {
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media(max-width:700px) {
+
+    .section-block,
+    .statement-section,
+    .cta-section {
+        padding: 55px 6%;
+    }
+
+    .page-intro {
+        padding: 60px 6%;
+    }
+
+    .split-section {
+        grid-template-columns: 1fr;
+        padding: 55px 6%;
+        gap: 28px;
+    }
+
+    .services-grid,
+    .service-detail-grid,
+    .values-grid,
+    .gallery-grid,
+    .contact-layout,
+    .field-row {
+        grid-template-columns: 1fr;
+    }
+
+    .site-footer {
+        padding: 30px 6%;
+    }
+
+    .card-content p {
+        min-height: 0;
+    }
+
+    .hero-image {
+        height: 260px;
+    }
+
+    .contact-panel h2,
+    .contact-aside h2 {
+        font-size: 30px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .difference-section {
+        padding: 52px 6%;
+    }
+
+    .comparison {
+        height: 300px;
+    }
+
+    .comparison-label {
+        top: 12px;
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    .comparison-label-before {
+        left: 12px;
+    }
+
+    .comparison-label-after {
+        right: 12px;
+    }
+
+    .comparison-knob {
+        width: 46px;
+        height: 46px;
+        font-size: 18px;
+    }
+}
+
+@media(max-width:800px) {
+    .site-header {
+        flex-wrap: wrap
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto
+    }
+
+    .main-nav {
+        display: none;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 0
+    }
+
+    .main-nav.is-open {
+        display: flex
+    }
+
+    .main-nav a {
+        padding: 14px 0;
+        min-height: 44px
+    }
+
+    .process-grid,
+    .why-grid {
+        grid-template-columns: 1fr
+    }
+
+    .gallery-open {
+        position: static;
+        width: 100%;
+        margin-top: 5px
+    }
+}
+
+@media(max-width:700px) {
+    .hero-trust {
+        gap: 10px 16px
+    }
+
+    .lightbox {
+        padding: 12px
+    }
+
+    .lightbox-controls button {
+        font-size: 12px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    html {
+        scroll-behavior: auto
+    }
+}
+
+@media(max-width:800px) {
+    .hero-cinematic {
+        min-height: 760px;
+        padding: 0 6%
+    }
+
+    .hero-cinematic .hero-content {
+        margin: -100px auto 0
+    }
+
+    .hero-cinematic h1 {
+        font-size: clamp(43px, 10vw, 80px);
+        letter-spacing: .025em
+    }
+
+    .hero-cinematic h1 .hero-gold {
+        letter-spacing: .025em
+    }
+
+    .hero-marques {
+        left: 6%;
+        right: 6%;
+        bottom: 25px
+    }
+
+    .hero-marques ul {
+        gap: 15px 23px
+    }
+
+    .hero-marques li {
+        font-size: 17px
+    }
+
+    .hero-marques>p {
+        font-size: 10px;
+        letter-spacing: .18em
+    }
+}
+
+@media(max-width:480px) {
+    .hero-cinematic {
+        min-height: 740px
+    }
+
+    .hero-cinematic .hero-content {
+        margin: -100px auto 0
+    }
+
+    .hero-cinematic h1 {
+        font-size: clamp(40px, 11vw, 58px)
+    }
+
+    .hero-cinematic .hero-buttons {
+        flex-direction: column;
+        align-items: center
+    }
+
+    .hero-cinematic .hero-buttons .btn {
+        width: min(100%, 300px)
+    }
+
+    .hero-marques ul {
+        gap: 14px 20px
+    }
+
+    .hero-marques li {
+        font-size: 14px
+    }
+
+    .hero-marques .marque-amg {
+        font-size: 23px
+    }
+
+    .hero-marques .marque-porsche {
+        font-size: 12px
+    }
+
+    .hero-marques .marque-mercedes {
+        font-size: 15px
+    }
+
+    .hero-marques .marque-tesla {
+        font-size: 13px
+    }
+
+    .hero-marques .marques-note {
+        font-size: 9px
+    }
+}
+
+@media(max-width:800px) {
+    .hero-minimal {
+        min-height: 0;
+        padding: 80px 6% 36px
+    }
+
+    .hero-minimal .hero-content {
+        margin: 0
+    }
+
+    .hero-minimal h1 {
+        font-size: clamp(40px, 7vw, 62px)
+    }
+
+    .hero-minimal .hero-image {
+        height: 310px;
+        margin-top: 35px
+    }
+
+    .hero-minimal .hero-marques {
+        bottom: auto
+    }
+}
+
+@media(max-width:480px) {
+    .hero-minimal {
+        padding: 66px 6% 32px
+    }
+
+    .hero-minimal h1 {
+        font-size: clamp(36px, 10vw, 48px)
+    }
+
+    .hero-minimal .hero-description {
+        font-size: 15px
+    }
+
+    .hero-minimal .hero-image {
+        height: 230px;
+        margin-top: 25px
+    }
+
+    .hero-minimal .hero-marques ul {
+        gap: 15px 19px
+    }
+
+    .hero-minimal .hero-marques li {
+        font-size: 14px
+    }
+
+    .hero-minimal .hero-marques>p {
+        font-size: 10px;
+        letter-spacing: .12em
+    }
+}
+
+@media (max-width: 800px) {
+    .home-page .site-header { padding: 18px 6%; }
+    .home-page .site-header.is-scrolled { padding: 12px 6%; }
+    .home-page .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(12,14,16,.98);
+        padding: 12px 6% 18px;
+        border-bottom: 1px solid #373431;
+    }
+    .home-page .main-nav a { padding: 13px 0; }
+    .home-page .hero-minimal { padding-top: 155px; }
+}
+
+@media (max-width: 700px) {
+    .home-page .site-header { flex-direction: row; gap: 14px; }
+    .home-page .logo-subtitle { font-size: 11px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-page .site-header, .home-page .main-nav a::after { transition: none; }
+}
+
+@media (max-width: 700px) {
+    .hero-minimal {
+        padding: 115px 5% 40px;
+    }
+
+    .hero-minimal h1 {
+        font-size: clamp(38px, 9vw, 65px);
+    }
+
+    .hero-minimal .hero-image {
+        height: 300px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .editorial-service {
+        padding: 21px 0;
+        font-size: 23px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .editorial-service {
+        transition: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .services-editorial {
+        grid-template-columns: 1fr;
+        padding: 65px 6%;
+        gap: 35px;
+    }
+
+    .services-editorial-image {
+        height: clamp(280px, 60vw, 480px);
+    }
+
+    .services-editorial-intro {
+        margin-bottom: 35px;
+    }
+
+    .editorial-service {
+        padding: 22px 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .services-editorial-image img,
+    .editorial-service,
+    .service-arrow {
+        transition: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .craftsmanship {
+        padding-bottom: 75px;
+    }
+
+    .craftsmanship-image {
+        height: 320px;
+    }
+
+    .craftsmanship-content {
+        padding: 45px 6% 0;
+    }
+
+    .craftsmanship-content h2 {
+        font-size: clamp(36px, 9vw, 52px);
+    }
+
+    .craftsmanship-signature {
+        gap: 12px;
+        margin-top: 35px;
+        font-size: 9px;
+        letter-spacing: 0.1em;
+    }
+}
+
+/* ==============================================
+   FULL-BLEED HERO — FINAL RESPONSIVE OVERRIDES
+============================================== */
+@media (max-width: 800px) {
+    .home-page .hero-minimal {
+        min-height: 100svh;
+        padding: 135px 6% 35px;
+    }
+    .home-page .hero-minimal h1 {
+        font-size: clamp(40px, 7.5vw, 72px);
+    }
+    .home-page .hero-minimal .hero-image {
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+    .home-page .hero-minimal .hero-image img {
+        object-position: center center;
+    }
+}
+@media (max-width: 480px) {
+    .home-page .hero-minimal {
+        min-height: 100svh;
+        padding: 120px 5% 28px;
+    }
+    .home-page .hero-minimal h1 {
+        font-size: clamp(36px, 10vw, 52px);
+        line-height: 1.02;
+    }
+    .home-page .hero-minimal .hero-marques { width: 100%; }
+    .home-page .hero-minimal .hero-marques ul { gap: 12px 16px; }
+    .home-page .hero-minimal .hero-marques li { font-size: 13px; }
+    .home-page .hero-minimal .hero-marques .marques-note { font-size: 9px; }
+}
+
+
+/* ==========================================
+   COMPACT HERO — TABLET
+========================================== */
+
+@media (max-width: 800px) {
+    .home-page .hero-minimal {
+        min-height: 0;
+        padding: 135px 6% 45px;
+    }
+
+    .home-page .hero-minimal h1 {
+        font-size: clamp(40px, 7vw, 65px);
+    }
+
+    .home-page .hero-minimal .hero-image {
+        height: 310px;
+    }
+}
+
+/* ==========================================
+   COMPACT HERO — MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+    .home-page .hero-minimal {
+        padding: 120px 5% 35px;
+    }
+
+    .home-page .hero-minimal h1 {
+        font-size: clamp(36px, 10vw, 48px);
+        margin-bottom: 12px;
+    }
+
+    .home-page .hero-minimal .hero-image {
+        height: 230px;
+    }
+
+    .home-page .hero-minimal .hero-marques {
+        margin-top: 15px;
+    }
+}
