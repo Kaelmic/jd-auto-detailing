@@ -1,15 +1,18 @@
-// PrimeX shared interactions — no backend, no stored personal data.
+// JD Auto shared interactions — no backend, no stored personal data.
 (() => {
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.main-nav');
   if (toggle && nav) {
-    toggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('is-open');
+    const setOpen = open => {
+      nav.classList.toggle('is-open', open);
       toggle.setAttribute('aria-expanded', String(open));
       toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
-    });
-    nav.addEventListener('click', e => {
-      if (e.target.closest('a')) {nav.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');}
+    };
+    toggle.addEventListener('click', () => setOpen(!nav.classList.contains('is-open')));
+    nav.addEventListener('click', e => { if (e.target.closest('a')) setOpen(false); });
+    // Escape closes the menu and returns focus to the button
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && nav.classList.contains('is-open')) { setOpen(false); toggle.focus(); }
     });
   }
   // Gallery category filters and accessible dialog lightbox.

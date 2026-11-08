@@ -1,21 +1,15 @@
+// JD Auto — navbar scroll effect
+(() => {
+    const header = document.querySelector(".site-header");
+    if (!header) return;
 
-// PrimeX — Navbar Scroll Effect
-
-const header = document.querySelector(".site-header");
-
-if (header) {
+    // Activate the dark navbar after scrolling 60px.
     const updateNavbar = () => {
-        // Activate the dark navbar after scrolling 60px.
-        const isScrolled = window.scrollY > 60;
-
-        header.classList.toggle("is-scrolled", isScrolled);
+        header.classList.toggle("is-scrolled", window.scrollY > 60);
     };
 
-    // Check whenever the user scrolls.
-    window.addEventListener("scroll", updateNavbar, {
-        passive: true
-    });
+    window.addEventListener("scroll", updateNavbar, { passive: true });
 
     // Check immediately when the page loads.
     updateNavbar();
-}
+})();

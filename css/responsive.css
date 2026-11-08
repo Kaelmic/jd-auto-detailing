@@ -417,67 +417,25 @@
     }
 }
 
-@media (max-width: 700px) {
-    .craftsmanship {
-        padding-bottom: 75px;
-    }
-
-    .craftsmanship-image {
-        height: 320px;
-    }
-
-    .craftsmanship-content {
-        padding: 45px 6% 0;
-    }
-
-    .craftsmanship-content h2 {
-        font-size: clamp(36px, 9vw, 52px);
-    }
-
-    .craftsmanship-signature {
-        gap: 12px;
-        margin-top: 35px;
-        font-size: 9px;
-        letter-spacing: 0.1em;
-    }
-}
-
-/* ==============================================
-   FULL-BLEED HERO — FINAL RESPONSIVE OVERRIDES
-============================================== */
 @media (max-width: 800px) {
-    .home-page .hero-minimal {
-        min-height: 100svh;
-        padding: 135px 6% 35px;
+    .craftsmanship {
+        grid-template-columns: 1fr;
+        padding: 65px 6%;
+        gap: 35px;
     }
-    .home-page .hero-minimal h1 {
-        font-size: clamp(40px, 7.5vw, 72px);
+
+    /* image on top, like the services section */
+    .craftsmanship-image {
+        order: -1;
+        height: clamp(280px, 60vw, 480px);
     }
-    .home-page .hero-minimal .hero-image {
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-    }
-    .home-page .hero-minimal .hero-image img {
-        object-position: center center;
-    }
-}
-@media (max-width: 480px) {
-    .home-page .hero-minimal {
-        min-height: 100svh;
-        padding: 120px 5% 28px;
-    }
-    .home-page .hero-minimal h1 {
-        font-size: clamp(36px, 10vw, 52px);
-        line-height: 1.02;
-    }
-    .home-page .hero-minimal .hero-marques { width: 100%; }
-    .home-page .hero-minimal .hero-marques ul { gap: 12px 16px; }
-    .home-page .hero-minimal .hero-marques li { font-size: 13px; }
-    .home-page .hero-minimal .hero-marques .marques-note { font-size: 9px; }
 }
 
+@media (prefers-reduced-motion: reduce) {
+    .craftsmanship-image img {
+        transition: none;
+    }
+}
 
 /* ==========================================
    COMPACT HERO — TABLET
@@ -519,4 +477,83 @@
     .home-page .hero-minimal .hero-marques {
         margin-top: 15px;
     }
+}
+
+/* ==========================================
+   JD AUTO — HOMEPAGE HEADER + LOGO ROW (PHONE / TABLET)
+========================================== */
+
+@media (max-width: 800px) {
+    /* Logo left, BOOK + menu button right (the menu button used to sit in the middle column) */
+    .home-page .site-header,
+    .home-page .site-header.is-scrolled {
+        grid-template-columns: 1fr auto auto;
+        gap: 12px;
+    }
+
+    .home-page .logo { order: 1; }
+    .home-page .header-actions { order: 2; }
+    .home-page .menu-toggle { order: 3; margin-left: 0; }
+
+    /* The opened menu panel was shrinking to a narrow centred column because of
+       justify-self: center (set for the desktop layout). Stretch it edge to edge. */
+    .home-page .main-nav { justify-self: stretch; }
+
+    /* Six logos in one row were about 38px wide on a phone: two rows of three instead */
+    .home-page .hero-minimal .hero-marques ul {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px 18px;
+    }
+
+    .home-page .hero-minimal .hero-marques li { height: 48px; }
+    .home-page .hero-minimal .hero-marques li img { height: 32px; }
+
+    /* Booking line stacks and centres on small screens */
+    .home-page .hero-minimal .hero-book {
+        flex-direction: column;
+        gap: 2px;
+        text-align: center;
+    }
+
+    .home-page .hero-minimal .hero-marques { margin-top: 26px; }
+}
+
+/* ==========================================
+   INNER PAGES — HEADER (PHONE / TABLET)
+========================================== */
+
+@media (max-width: 800px) {
+    .inner-page .site-header {
+        grid-template-columns: 1fr auto auto;
+        gap: 12px;
+        padding: 18px 6%;
+    }
+
+    .inner-page .site-header .logo { order: 1; width: clamp(100px, 30vw, 180px); }
+    .inner-page .header-actions { order: 2; }
+    .inner-page .menu-toggle { order: 3; margin-left: 0; }
+
+    .inner-page .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        justify-self: stretch;
+        align-items: stretch;
+        background: rgba(12, 14, 16, .98);
+        padding: 12px 6% 18px;
+        border-bottom: 1px solid #373431;
+    }
+
+    .inner-page .main-nav a { padding: 13px 0; }
+    .inner-page .main-nav a::after,
+    .inner-page .main-nav a[aria-current="page"]::after { display: none; }
+}
+
+@media (max-width: 700px) {
+    .inner-page .site-header { flex-direction: row; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .inner-page .main-nav a::after { transition: none; }
 }

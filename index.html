@@ -5,25 +5,23 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="PrimeX Auto Detailing — a premium automotive care website concept based in Malta."
+    <meta content="JD Auto Detailing Studio — a premium automotive care website concept based in Malta."
         name="description" />
-    <title>Home | PrimeX Auto Detailing</title>
+    <title>Home | JD Auto Detailing Studio</title>
     <link href="css/maincss.css" rel="stylesheet" />
     <link href="css/responsive.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Rajdhani:wght@600;700&family=Teko:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 
 <body class="home-page"><a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
     <a class="logo" href="index.html" aria-label="JD Auto home">
-        <span class="logo-name">
-            JD<span class="logo-x">AUTO</span>
-        </span>
-        <span class="logo-subtitle">DETAILING STUDIO</span>
+        <img class="brand-logo" src="images/logo.png"
+             alt="JD Auto Detailing Studio" width="1048" height="682">
     </a>
 
     <button
@@ -31,7 +29,7 @@
         type="button"
         aria-controls="main-nav"
         aria-expanded="false"
-        aria-label="Open navigation"
+        aria-label="Open navigation"s
     >
         <span></span><span></span><span></span>
     </button>
@@ -45,26 +43,6 @@
     </nav>
 
     <div class="header-actions">
-        <button
-            class="header-login"
-            type="button"
-            aria-label="Login — coming soon"
-            disabled
-        >
-            <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.6"
-                aria-hidden="true"
-            >
-                <circle cx="12" cy="8" r="3.5"></circle>
-                <path d="M5 21v-3a7 7 0 0 1 14 0v3"></path>
-            </svg>
-        </button>
-
         <a class="header-book" href="contact.html">BOOK</a>
     </div>
 </header>
@@ -73,14 +51,20 @@
         <section class="hero hero-minimal">
             <div class="hero-content">
                 <h1>Precision in Every Detail.</h1>
+                <p class="hero-description">Sun, dust and daily driving wear paint down. We bring it back by hand.</p>
             </div>
-            <div aria-hidden="false" class="hero-image"><img alt="AMG GT detailing before and after"
+            <div class="hero-image"><img alt="Mercedes-AMG GT in a dark detailing studio, dirty on the left half and polished on the right"
                     fetchpriority="high"
                     src="images/hero-bg.png" />
             </div>
 
+            <div class="hero-book">
+                <p class="hero-book-note">Same car. Left: untouched. Right: after our detail.</p>
+                <a class="hero-book-link" href="contact.html">Book the right side <span aria-hidden="true">→</span></a>
+            </div>
 
-            <div aria-label="Automotive marques admired by enthusiasts" class="hero-marques">
+
+            <div aria-label="Automotive marques admired by enthusiasts" class="hero-marques" role="group">
                 <p>FOR THE CARS WE LOVE</p>
                 <ul>
                     <li><img src="images/svg/BMW.svg" alt="BMW"></li>
@@ -93,12 +77,12 @@
                 <span class="marques-note">Independent detailing concept · Not affiliated with the marques shown</span>
             </div>
         </section>
-        
+
 <section class="services-editorial" id="services">
     <div class="services-editorial-image">
         <img
             src="images/services-feature.jpg"
-            alt="Detailed view of a sleek yellow sports car with glossy reflections captured in Berlin."
+            alt="Yellow sports car with glossy paint reflections"
             loading="lazy"
         >
     </div>
@@ -159,21 +143,39 @@
                 </div>
                 <span class="comparison-label comparison-label-before">BEFORE</span>
                 <span class="comparison-label comparison-label-after">AFTER</span>
-                <div aria-hidden="true" class="comparison-divider"><span class="comparison-knob">‹   ›</span></div>
+                <div aria-hidden="true" class="comparison-divider"><span class="comparison-knob">‹   ›</span></div>
                 <label class="visually-hidden" for="comparison-range">Reveal more of the before or after image</label>
                 <input aria-describedby="comparison-disclaimer" class="comparison-range" id="comparison-range" max="100"
                     min="0" type="range" value="50" />
             </div>
             <div class="difference-bottom">
-                <p id="comparison-caption"><strong>Exterior detailing</strong> — AI-generated visual comparison</p>
+                <p aria-live="polite" id="comparison-caption"><strong>Exterior detailing</strong> — AI-generated illustrative comparison</p>
                 <a class="text-link" href="gallery.html">VIEW OUR GALLERY →</a>
             </div>
             <p class="difference-disclaimer" id="comparison-disclaimer">AI-generated illustrative before-and-after comparison. Not an actual customer result.</p>
         </section>
-        
-        
+
+
 <!-- CRAFTSMANSHIP -->
 <section class="craftsmanship">
+    <div class="craftsmanship-content">
+        <h2>It's all in the finish.</h2>
+
+        <p>
+            A good finish starts long before the polisher comes out.
+            We wash, decontaminate and inspect every panel, then correct
+            and protect it one section at a time.
+        </p>
+
+        <div class="craftsmanship-signature">
+            INSPECT <span></span>
+            CORRECT <span></span>
+            PROTECT
+        </div>
+
+        <a class="text-link" href="about.html">DISCOVER OUR STORY →</a>
+    </div>
+
     <div class="craftsmanship-image">
         <img
             src="images/car-polishing.png"
@@ -181,39 +183,21 @@
             loading="lazy"
         >
     </div>
-
-    <div class="craftsmanship-content">
-        <h2>It's all in the finish.</h2>
-
-        <p>
-            Great detailing is more than a clean car.
-            It's the preparation, the technique, and
-            the care given to every surface.
-        </p>
-
-        <div class="craftsmanship-signature">
-            PAINTWORK <span></span>
-            INTERIOR <span></span>
-            PROTECTION
-        </div>
-    </div>
 </section>
 
-        <section class="statement-section">
-            <p class="eyebrow">THE PRIMEX APPROACH</p>
-            <h2>Care you can see.<br /><em>Craftsmanship you can feel.</em></h2>
-            <p>From the first wash to the final inspection, every detail matters.</p><a class="text-link"
-                href="about.html">DISCOVER OUR STORY →</a>
-        </section>
         <section class="cta-section">
             <p class="eyebrow">READY FOR A FRESH FINISH?</p>
             <h2>Your Vehicle Deserves Better.</h2>
-            <p>Experience the PrimeX standard of automotive care.</p><a class="btn btn-primary" href="contact.html">GET
-                IN TOUCH →</a>
+            <p>Experience the JD Auto standard of automotive care.</p><a class="btn btn-primary" href="contact.html">BOOK
+                A DETAIL →</a>
         </section>
     </main>
     <footer class="site-footer">
-        <div><a class="footer-brand" href="index.html">JD<span>AUTO</span></a>
+        <div><a class="footer-brand footer-brand-image" href="index.html">
+                <img class="brand-logo" src="images/logo.png"
+                     alt="JD Auto Detailing Studio" width="2048" height="682"
+                     loading="lazy">
+            </a>
             <p>Precision in Every Detail.</p>
         </div>
         <div class="footer-links"><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a

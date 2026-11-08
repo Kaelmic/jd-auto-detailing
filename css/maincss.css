@@ -10,7 +10,7 @@ body {
     margin: 0;
     background-color: #111315;
     color: #F3F0E9;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Archivo", Arial, Helvetica, sans-serif;
 }
 
 .site-header {
@@ -749,6 +749,7 @@ textarea::placeholder {
     height: 100%;
     opacity: 0;
     cursor: ew-resize;
+    touch-action: pan-y;
     margin: 0;
 }
 
@@ -1346,18 +1347,19 @@ button {
 }
 
 .home-page .logo-subtitle {
-    font-family: "Cormorant Garamond", Georgia, serif;
+    font-family: "Archivo", Arial, sans-serif;
     font-weight: 600;
-    font-size: 13px;
-    letter-spacing: .23em;
-    margin-top: 5px;
+    font-size: 11px;
+    letter-spacing: .32em;
+    padding-left: .32em; /* balances the trailing letter-spacing so the line stays centred */
+    margin-top: 6px;
 }
 
 .home-page .main-nav a {
-    font-family: "Manrope", Arial, sans-serif;
+    font-family: "Archivo", Arial, sans-serif;
     font-weight: 600;
-    font-size: 11px;
-    letter-spacing: .13em;
+    font-size: 12px;
+    letter-spacing: .14em;
     position: relative;
     padding: 9px 0;
 }
@@ -1513,58 +1515,47 @@ button {
     padding-left: 8px;
 }
 
-/* Craftsmanship */
+/* Craftsmanship: text left, image right (mirrors the services section) */
 
 .craftsmanship {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(35px, 6vw, 100px);
+    align-items: center;
+    padding: 100px 7%;
     background: #111315;
-    padding: 0 0 110px;
-}
-
-.craftsmanship-image {
-    width: 100%;
-    height: clamp(350px, 50vw, 650px);
-    overflow: hidden;
-    background: #1A1C1E;
-}
-
-.craftsmanship-image img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
 }
 
 .craftsmanship-content {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 75px 6% 0;
+    max-width: 540px;
+    margin-inline: auto;
+    text-align: center;
 }
 
 .craftsmanship-content h2 {
     font-family: "Archivo", sans-serif;
-    font-size: clamp(38px, 5vw, 72px);
+    font-size: clamp(36px, 4vw, 62px);
     font-weight: 600;
-    letter-spacing: -0.045em;
-    line-height: 1.05;
+    line-height: 1.08;
+    letter-spacing: -0.04em;
     color: #F3F0E9;
-    margin: 0 0 26px;
+    margin: 0 0 24px;
 }
 
 .craftsmanship-content p {
-    max-width: 620px;
-    font-size: clamp(16px, 1.5vw, 19px);
+    font-size: 16px;
     line-height: 1.8;
-    color: #B5B5B5;
+    color: #AEB0B2;
     margin: 0;
 }
 
 .craftsmanship-signature {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 18px;
-    margin-top: 48px;
+    margin: 40px 0 36px;
     font-family: "Archivo", sans-serif;
     font-size: 11px;
     font-weight: 500;
@@ -1579,6 +1570,25 @@ button {
     background: #B49A68;
 }
 
+.craftsmanship-image {
+    height: 600px;
+    overflow: hidden;
+    background: #1A1C1E;
+}
+
+.craftsmanship-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s ease;
+}
+
+.craftsmanship-image:hover img {
+    transform: scale(1.035);
+}
+
 /* Homepage hero layout and image */
 
 .home-page .hero-minimal {
@@ -1590,7 +1600,7 @@ button {
     width: 100%;
     min-height: 0;
     height: auto;
-    padding: 145px 7% 55px;
+    padding: 125px 7% 40px;
     background: #050607;
     text-align: center;
     overflow: hidden;
@@ -1613,7 +1623,7 @@ button {
     z-index: 1;
     width: min(1350px, 100%);
     max-width: 1350px;
-    height: 400px;
+    height: clamp(260px, 38vh, 420px);
     margin: 0 auto;
     border-radius: 0;
     overflow: hidden;
@@ -1675,11 +1685,13 @@ button {
 }
 
 .home-page .hero-minimal .hero-marques > p{
-    color: #A4A5A7;
+    color: #B4B5B7;
+    font-size: 12px;
 }
 
 .home-page .hero-minimal .hero-marques .marques-note {
-    color: #888;
+    color: #9A9B9D;
+    font-size: 12px;
 }
 
 .home-page .hero-minimal .hero-marques ul {
@@ -1707,6 +1719,14 @@ button {
     max-width: 120px;
     height: 40px;
     object-fit: contain;
+    /* Turn every logo into the same soft white so no single brand colour shouts */
+    filter: brightness(0) invert(1);
+    opacity: .6;
+}
+
+/* The BMW roundel has solid filled areas, so a flat silhouette would turn it into a blank disc */
+.home-page .hero-minimal .hero-marques li img[alt="BMW"] {
+    filter: grayscale(1) brightness(1.25);
 }
 
 
@@ -1761,19 +1781,19 @@ button {
 }
 
 .header-book {
-    padding: 0 20px;
-    color: #B49A68;
-    background: rgba(180, 154, 104, 0.08);
-    border: 1px solid rgba(180, 154, 104, 0.5);
-    font-size: 11px;
+    padding: 0 22px;
+    color: #111315;
+    background: #B49A68;
+    border: 1px solid #B49A68;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 1px;
-    transition: background 0.2s, color 0.2s;
+    transition: background 0.2s, border-color 0.2s;
 }
 
 .header-book:hover {
-    color: #080808;
-    background: #B49A68;
+    background: #D2BA8C;
+    border-color: #D2BA8C;
 }
 
 .header-book:focus-visible {
@@ -1838,4 +1858,194 @@ button {
     max-width: none;
     margin-inline: auto;
     text-align: center;
+}
+
+/* Homepage hero: supporting line, and the booking line under the image */
+
+.home-page .hero-minimal .hero-description {
+    max-width: 760px;
+    margin: 0 auto 30px;
+}
+
+.home-page .hero-minimal .hero-book {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6px 32px;
+    width: min(1050px, 100%);
+    margin: 6px auto 0;
+    padding-top: 14px;
+    border-top: 1px solid rgba(180, 154, 104, 0.28);
+}
+
+.hero-book-note {
+    margin: 0;
+    color: #A9AAAC;
+    font-size: 14px;
+    letter-spacing: .03em;
+}
+
+.hero-book-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 44px;
+    color: #B49A68;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    /* underline drawn as a background so it spans the text and the arrow */
+    background: linear-gradient(currentColor, currentColor) no-repeat 0 calc(100% - 8px) / 100% 1px;
+    transition: color .2s ease, background-size .2s ease;
+}
+
+.hero-book-link span {
+    display: inline-block;
+    transition: transform .25s ease;
+}
+
+.hero-book-link:hover,
+.hero-book-link:focus-visible {
+    color: #D2BA8C;
+    background-size: 100% 2px;
+}
+
+.hero-book-link:hover span,
+.hero-book-link:focus-visible span {
+    transform: translateX(6px);
+}
+
+.home-page .hero-minimal .hero-marques {
+    margin-top: 34px;
+}
+
+/* Image branding: crop only the logo file's empty vertical space. */
+.home-page .site-header .logo,
+.footer-brand-image {
+    position: relative;
+    display: block;
+    width: clamp(160px, 18vw, 260px);
+    aspect-ratio: 5.6 / 1;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.home-page .site-header .logo .brand-logo,
+.footer-brand-image .brand-logo {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    transform: translateY(-50%);
+}
+
+@media (max-width: 800px) {
+    .home-page .site-header .logo {
+        width: clamp(100px, 30vw, 180px);
+    }
+}
+
+/* ==========================================
+   INNER PAGES — same navbar and footer as the home page
+   (the home page floats its header over the hero; here it sits at the top, sticky)
+========================================== */
+
+.inner-page .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 24px;
+    padding: 16px 6%;
+    background: rgba(8, 8, 8, 0.94);
+    border-bottom: 1px solid rgba(180, 154, 104, 0.18);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.inner-page .site-header .logo {
+    position: relative;
+    display: block;
+    width: clamp(160px, 18vw, 260px);
+    aspect-ratio: 5.6 / 1;
+    overflow: hidden;
+    flex-shrink: 0;
+    justify-self: start;
+}
+
+.inner-page .site-header .logo .brand-logo {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    transform: translateY(-50%);
+}
+
+.inner-page .main-nav {
+    justify-self: center;
+    align-items: center;
+    gap: clamp(18px, 2.5vw, 40px);
+}
+
+.inner-page .main-nav a {
+    font-family: "Archivo", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: .14em;
+    position: relative;
+    padding: 9px 0;
+}
+
+.inner-page .main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 1px;
+    height: 1px;
+    background: #B49A68;
+    transition: right .25s ease;
+}
+
+.inner-page .main-nav a:hover::after,
+.inner-page .main-nav a.active::after {
+    right: 0;
+}
+
+/* the current page keeps its underline here (the shared rule above hides it) */
+.inner-page .main-nav a[aria-current="page"]::after {
+    display: block;
+    right: 0;
+}
+
+.inner-page .main-nav a.active,
+.inner-page .main-nav a[aria-current="page"] {
+    color: #B49A68;
+}
+
+/* anchors from the home page (services.html#paint-correction) land below the sticky header */
+.inner-page [id] {
+    scroll-margin-top: 96px;
+}
+
+/* Footer: logo image + links, identical on every page */
+.footer-brand-image {
+    width: 180px;
+}
+
+.site-footer .footer-tagline {
+    margin: 6px 0 0;
 }
