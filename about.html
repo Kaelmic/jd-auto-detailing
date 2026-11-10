@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Rajdhani:wght@600;700&family=Teko:wght@600;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="inner-page"><a class="skip-link" href="#main-content">Skip to content</a>
+<body class="inner-page about-page"><a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header">
     <a class="logo" href="index.html" aria-label="JD Auto Detailing Studio — home">
         <img class="brand-logo" src="images/logo.png" alt="JD Auto Detailing Studio" width="1048" height="682">
@@ -39,39 +39,79 @@
 
 <main id="main-content">
 
-    <section class="page-intro">
-        <p class="eyebrow">OUR STORY</p>
-        <h1>Driven by the Details.</h1>
-        <p>Automotive care shaped by precision, patience and a passion for exceptional finishes.</p>
+    <section class="page-hero">
+        <h1><span>Slow work.</span> <span>Straight answers.</span></h1>
+        <p>JD Auto is a detailing studio for people who would rather know what was done to their car than be told it is "sorted". We take our time, and we write down what we find.</p>
     </section>
 
-    <section class="split-section">
-        <div class="media-frame tall"><img alt="Elegant sports car with a reflective finish" loading="lazy" src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=85" /></div>
-        <div class="split-copy">
-            <p class="eyebrow">WHO WE ARE</p>
-            <h2>More than a clean car.</h2>
-            <p>JD Auto is a detailing studio built around one idea: paint, glass and leather all wear differently, so each one gets its own treatment.</p>
-            <p>Our philosophy is simple: respect the vehicle, take pride in the process and never overlook the finishing touches.</p>
-            <a class="btn btn-primary" href="services.html">EXPLORE SERVICES →</a>
+    <section class="about-process" aria-labelledby="process-title">
+        <div class="about-process-intro">
+            <h2 id="process-title">The order of work</h2>
+            <p>Every car goes through the same five stages, in the same order. Skipping one is how a good polish ends up on a dirty panel.</p>
         </div>
+        <ol class="about-steps">
+            <li class="about-step">
+                <span class="about-step-num" aria-hidden="true">01</span>
+                <div>
+                    <h3>Inspect</h3>
+                    <p>Before any water touches the car, we walk it under hard light and note what is there: swirls, etching, stone chips, worn trim. You get the list in plain words.</p>
+                </div>
+            </li>
+            <li class="about-step">
+                <span class="about-step-num" aria-hidden="true">02</span>
+                <div>
+                    <h3>Wash and decontaminate</h3>
+                    <p>Hand wash, then iron remover and clay. Paint should feel like glass before it is polished, otherwise we are grinding dirt into it.</p>
+                </div>
+            </li>
+            <li class="about-step">
+                <span class="about-step-num" aria-hidden="true">03</span>
+                <div>
+                    <h3>Correct</h3>
+                    <p>A test panel first. We use the lightest pad and polish that gets the result, because clear coat only has so much to give.</p>
+                </div>
+            </li>
+            <li class="about-step">
+                <span class="about-step-num" aria-hidden="true">04</span>
+                <div>
+                    <h3>Protect</h3>
+                    <p>Wax, sealant or ceramic coating, chosen for how the car is driven and parked, not for what costs more.</p>
+                </div>
+            </li>
+            <li class="about-step">
+                <span class="about-step-num" aria-hidden="true">05</span>
+                <div>
+                    <h3>Hand over</h3>
+                    <p>We walk around the car with you, show what changed and what did not, and explain how to wash it so it stays that way.</p>
+                </div>
+            </li>
+        </ol>
     </section>
 
-    <section class="section-block">
-        <div class="section-heading">
-            <p class="eyebrow">OUR PRINCIPLES</p>
-            <h2>The JD Auto standard.</h2>
+    <figure class="about-band">
+        <img src="images/exterior-after.png" alt="A polished dark sports car in a detailing studio, lit by overhead strip lights" loading="lazy">
+        <figcaption><span>The finish we work toward.</span><span>AI-generated illustration, not a customer vehicle.</span></figcaption>
+    </figure>
+
+    <section class="about-wont" aria-labelledby="wont-title">
+        <div class="about-wont-intro">
+            <h2 id="wont-title">What we won't do</h2>
+            <p>A short list, so you know where we stand before you book.</p>
         </div>
-        <div class="values-grid">
-            <article><span>01</span><h3>Precision</h3><p>Careful attention to every panel, seam and surface.</p></article>
-            <article><span>02</span><h3>Craftsmanship</h3><p>A considered process built around quality, not shortcuts.</p></article>
-            <article><span>03</span><h3>Respect</h3><p>Every vehicle deserves care tailored to its condition.</p></article>
-        </div>
+        <ul class="about-wont-list">
+            <li><strong>Promise every scratch will disappear.</strong>Deep ones need paint, not polish.</li>
+            <li><strong>Polish through the clear coat for a perfect look.</strong>We measure, and we stop when there is nothing safe left to take.</li>
+            <li><strong>Sell a coating to a car that needs a good wash.</strong>If that is all it needs, that is what we will say.</li>
+            <li><strong>Rush a car to fill the schedule.</strong>Fewer cars a day is the whole point.</li>
+        </ul>
     </section>
 
-    <section class="cta-section">
-        <h2>Your vehicle deserves better.</h2>
-        <p>Tell us what it needs and we will recommend the right treatment.</p>
-        <a class="btn btn-primary" href="contact.html">BOOK A DETAIL →</a>
+    <section class="page-close" aria-labelledby="close-title">
+        <h2 id="close-title">Got a car in mind?</h2>
+        <div class="page-close-links">
+            <a class="hero-book-link" href="contact.html">Tell us about it <span aria-hidden="true">→</span></a>
+            <a class="page-quiet" href="services.html">or see the services</a>
+        </div>
     </section>
 </main>
 <footer class="site-footer">

@@ -2049,3 +2049,576 @@ button {
 .site-footer .footer-tagline {
     margin: 6px 0 0;
 }
+
+/* ==========================================
+   ABOUT PAGE — editorial layout (header and footer stay shared)
+========================================== */
+
+.page-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    gap: clamp(30px, 6vw, 100px);
+    align-items: end;
+    padding: clamp(70px, 10vw, 130px) 7% clamp(60px, 7vw, 90px);
+    border-bottom: 1px solid rgba(180, 154, 104, 0.28);
+}
+
+.page-hero h1 {
+    margin: 0;
+    font-family: "Rajdhani", sans-serif;
+    font-size: clamp(48px, 8.2vw, 124px);
+    font-weight: 700;
+    line-height: .92;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #F3F0E9;
+}
+
+.page-hero h1 span {
+    display: block;
+}
+
+.page-hero p {
+    margin: 0 0 6px;
+    max-width: 44ch;
+    color: #AEB0B2;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* The order of work */
+
+.about-process {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: clamp(30px, 6vw, 100px);
+    padding: clamp(70px, 8vw, 110px) 7%;
+}
+
+.about-process-intro {
+    position: sticky;
+    top: 110px;
+    align-self: start;
+}
+
+.about-process-intro h2,
+.about-wont h2,
+.page-close h2 {
+    margin: 0 0 20px;
+    font-family: "Rajdhani", sans-serif;
+    font-size: clamp(36px, 4.6vw, 64px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+}
+
+.about-process-intro p,
+.about-wont-intro p {
+    margin: 0;
+    max-width: 38ch;
+    color: #AEB0B2;
+    line-height: 1.8;
+}
+
+.about-steps {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid rgba(243, 240, 233, 0.18);
+}
+
+.about-step {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 8px 20px;
+    padding: 30px 0 32px;
+    border-top: 1px solid rgba(243, 240, 233, 0.18);
+}
+
+.about-step-num {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1;
+    color: #B49A68;
+}
+
+.about-step h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.about-step p {
+    margin: 0;
+    max-width: 56ch;
+    color: #AEB0B2;
+    line-height: 1.75;
+}
+
+/* Wide image band */
+
+.about-band {
+    margin: 0 7%;
+}
+
+.about-band img {
+    display: block;
+    width: 100%;
+    height: clamp(240px, 38vw, 520px);
+    object-fit: cover;
+    object-position: center 60%;
+    background: #1A1C1E;
+}
+
+.about-band figcaption {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-top: 12px;
+    color: #A9AAAC;
+    font-size: 12px;
+    letter-spacing: .04em;
+}
+
+/* What we won't do */
+
+.about-wont {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: clamp(30px, 6vw, 100px);
+    padding: clamp(70px, 8vw, 110px) 7%;
+}
+
+.about-wont-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid rgba(243, 240, 233, 0.18);
+}
+
+.about-wont-list li {
+    position: relative;
+    padding: 24px 0 24px 36px;
+    border-top: 1px solid rgba(243, 240, 233, 0.18);
+    color: #AEB0B2;
+    line-height: 1.7;
+}
+
+.about-wont-list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: #B49A68;
+}
+
+.about-wont-list strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #F3F0E9;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+}
+
+/* Closing line (replaces the centred banner) */
+
+.page-close {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px 40px;
+    padding: 56px 7% 70px;
+    border-top: 1px solid rgba(180, 154, 104, 0.28);
+}
+
+.page-close h2 {
+    margin: 0;
+}
+
+.page-close-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 32px;
+}
+
+.page-close-links .hero-book-link {
+    font-size: 15px;
+}
+
+.page-close-links .page-quiet {
+    color: #A9AAAC;
+    font-size: 14px;
+    letter-spacing: .03em;
+}
+
+/* ==========================================
+   SHARED PAGE PIECES (services, gallery, contact)
+========================================== */
+
+.page-split {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: clamp(30px, 6vw, 100px);
+    padding: clamp(70px, 8vw, 110px) 7%;
+}
+
+.page-split h2,
+.contact-page .contact-panel h2,
+.contact-page .contact-aside h2,
+.svc h2 {
+    margin: 0 0 20px;
+    font-family: "Rajdhani", sans-serif;
+    font-size: clamp(36px, 4.6vw, 64px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+}
+
+.page-split-intro p {
+    margin: 0;
+    max-width: 38ch;
+    color: #AEB0B2;
+    line-height: 1.8;
+}
+
+.ruled {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid rgba(243, 240, 233, 0.18);
+}
+
+.ruled > li {
+    border-top: 1px solid rgba(243, 240, 233, 0.18);
+}
+
+/* ---------- Services ---------- */
+
+.svc-list {
+    padding: clamp(50px, 6vw, 80px) 7% 0;
+}
+
+.svc {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1.15fr) minmax(0, .85fr);
+    gap: 24px clamp(24px, 4vw, 60px);
+    align-items: start;
+    padding: 46px 0 52px;
+    border-top: 1px solid rgba(243, 240, 233, 0.18);
+}
+
+.svc:last-child {
+    border-bottom: 1px solid rgba(243, 240, 233, 0.18);
+}
+
+.svc-num {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1;
+    color: #B49A68;
+}
+
+.svc h2 {
+    font-size: clamp(32px, 3.8vw, 54px);
+    margin-bottom: 14px;
+}
+
+.svc-lead {
+    margin: 0 0 26px;
+    max-width: 46ch;
+    color: #C3C3C3;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.svc dl {
+    display: grid;
+    gap: 16px;
+    margin: 0 0 28px;
+}
+
+.svc dt {
+    margin-bottom: 4px;
+    color: #B49A68;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+.svc dd {
+    margin: 0;
+    max-width: 52ch;
+    color: #AEB0B2;
+    line-height: 1.7;
+}
+
+.svc-img {
+    margin: 0;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #1A1C1E;
+}
+
+.svc-img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .6s ease;
+}
+
+.svc:hover .svc-img img {
+    transform: scale(1.035);
+}
+
+.choose a {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 6px 24px;
+    padding: 22px 0;
+    color: #F3F0E9;
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.choose a span {
+    color: #B49A68;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.choose a:hover,
+.choose a:focus-visible {
+    color: #D2BA8C;
+}
+
+.services-page .faq-list {
+    gap: 0;
+    border-bottom: 1px solid rgba(243, 240, 233, 0.18);
+}
+
+.services-page .faq-list details {
+    padding: 22px 0;
+    border: 0;
+    border-top: 1px solid rgba(243, 240, 233, 0.18);
+    background: transparent;
+}
+
+.services-page .faq-list summary {
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: -0.015em;
+}
+
+.services-page .faq-list details p {
+    max-width: 56ch;
+}
+
+/* ---------- Gallery ---------- */
+
+.gallery-page .gallery-section {
+    padding-top: clamp(40px, 5vw, 60px);
+}
+
+.gallery-page .gallery-filters {
+    gap: 6px 28px;
+}
+
+.gallery-page .gallery-filter {
+    padding: 12px 0;
+    border: 0;
+    border-bottom: 1px solid transparent;
+    border-radius: 0;
+    background: transparent;
+    color: #A9AAAC;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.gallery-page .gallery-filter:hover {
+    background: transparent;
+    border-color: transparent;
+    color: #F3F0E9;
+}
+
+.gallery-page .gallery-filter.is-selected {
+    background: transparent;
+    border-bottom-color: #B49A68;
+    color: #B49A68;
+}
+
+.gallery-page .gallery-grid {
+    display: block;
+    column-count: 3;
+    column-gap: 22px;
+}
+
+.gallery-page .gallery-item {
+    break-inside: avoid;
+    margin: 0 0 26px;
+}
+
+.gallery-page .gallery-item img {
+    aspect-ratio: auto;
+    height: auto;
+}
+
+.gallery-page .gallery-item figcaption {
+    padding: 10px 0 0;
+    color: #A9AAAC;
+    font-size: 12px;
+    letter-spacing: .04em;
+}
+
+/* the whole picture is the button; the label sits quietly in the corner */
+.gallery-page .gallery-open {
+    position: absolute;
+    inset: 0 0 34px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    width: auto;
+    margin: 0;
+    padding: 14px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: #F3F0E9;
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, .85);
+    transition: background .25s ease;
+}
+
+.gallery-page .gallery-open:hover {
+    background: rgba(5, 6, 7, .28);
+    color: #F3F0E9;
+}
+
+.gallery-page .gallery-open:focus-visible {
+    outline-offset: -4px;
+}
+
+.gallery-page .gallery-disclaimer {
+    max-width: 62ch;
+    color: #A9AAAC;
+}
+
+/* ---------- Contact ---------- */
+
+.contact-page .contact-layout {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: clamp(40px, 7vw, 110px);
+    padding-top: clamp(60px, 7vw, 90px);
+}
+
+.contact-page .contact-panel h2,
+.contact-page .contact-aside h2 {
+    font-size: clamp(32px, 3.8vw, 52px);
+    margin-bottom: 16px;
+}
+
+.contact-page .contact-form {
+    gap: 30px;
+}
+
+.contact-page .contact-form label {
+    gap: 4px;
+    color: #B49A68;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+}
+
+.contact-page input,
+.contact-page select,
+.contact-page textarea {
+    padding: 12px 0;
+    border: 0;
+    border-bottom: 1px solid #515459;
+    border-radius: 0;
+    background: transparent;
+    color: #F3F0E9;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: normal;
+    text-transform: none;
+    transition: border-color .2s ease;
+}
+
+.contact-page input:focus,
+.contact-page select:focus,
+.contact-page textarea:focus {
+    border-bottom-color: #B49A68;
+}
+
+.contact-page select option {
+    background: #1B1E20;
+    color: #F3F0E9;
+}
+
+.contact-page .enquiry-preview {
+    border-radius: 0;
+}
+
+.contact-steps li {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 4px 12px;
+    padding: 18px 0;
+    color: #AEB0B2;
+    line-height: 1.65;
+}
+
+.contact-steps li span {
+    font-family: "Rajdhani", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #B49A68;
+}
+
+.contact-steps strong {
+    display: block;
+    color: #F3F0E9;
+    font-weight: 600;
+}
+
+.contact-aside h3 {
+    margin: 44px 0 6px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #B49A68;
+}
+
+.contact-page .map-wrap {
+    margin-top: 14px;
+    aspect-ratio: 16 / 10;
+}
+
+/* match the dark theme (the embedded map is light by default) */
+.contact-page .map-wrap iframe {
+    filter: grayscale(1) invert(1) brightness(.85) contrast(1.1);
+}

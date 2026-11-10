@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Rajdhani:wght@600;700&family=Teko:wght@600;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="inner-page"><a class="skip-link" href="#main-content">Skip to content</a>
+<body class="inner-page contact-page"><a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header">
     <a class="logo" href="index.html" aria-label="JD Auto Detailing Studio — home">
         <img class="brand-logo" src="images/logo.png" alt="JD Auto Detailing Studio" width="1048" height="682">
@@ -39,16 +39,14 @@
 
 <main id="main-content">
 
-    <section class="page-intro">
-        <p class="eyebrow">GET IN TOUCH</p>
-        <h1>Let's Talk Details.</h1>
-        <p>Questions about our services? Use the enquiry form and tell us about your vehicle.</p>
+    <section class="page-hero">
+        <h1><span>Tell us</span> <span>about the car.</span></h1>
+        <p>A few lines is enough: make, model, and what is bothering you. We reply with what we would do, and why.</p>
     </section>
 
     <section class="section-block contact-layout">
         <div class="contact-panel">
-            <p class="eyebrow">CONTACT FORM</p>
-            <h2>Make an enquiry.</h2>
+            <h2>Make an enquiry</h2>
             <p class="form-notice">Demo only: this form does not submit or store your information.</p>
             <form class="contact-form" id="enquiry-form">
                 <div class="field-row">
@@ -65,7 +63,7 @@
                         <option>General Enquiry</option>
                     </select>
                 </label>
-                <label>Your message<textarea name="message" placeholder="Tell us about your vehicle..." required rows="6"></textarea></label>
+                <label>Your message<textarea name="message" placeholder="Make, model, and what you would like fixed..." required rows="6"></textarea></label>
                 <button class="btn btn-primary" type="submit">PREVIEW ENQUIRY →</button>
                 <div class="enquiry-preview" hidden id="enquiry-preview">
                     <h3>Enquiry preview</h3>
@@ -79,16 +77,20 @@
         </div>
 
         <aside class="contact-aside">
-            <p class="eyebrow">VISIT US</p>
-            <h2>Find the studio.</h2>
+            <h2>What happens next</h2>
+            <ol class="ruled contact-steps">
+                <li><span aria-hidden="true">01</span><div><strong>You send the details.</strong>Photos help, but are not required.</div></li>
+                <li><span aria-hidden="true">02</span><div><strong>We reply with a recommendation.</strong>What we would do, what it involves and why.</div></li>
+                <li><span aria-hidden="true">03</span><div><strong>You decide.</strong>No pressure, and no upsell on the day.</div></li>
+            </ol>
+
+            <h3>The studio</h3>
             <p>JD Auto is a concept business. No physical premises, telephone number or opening hours have been established.</p>
-            <div class="info-divider"></div>
-            <h3>Our Location</h3>
-            <p>Illustrative map only</p>
             <div class="map-wrap"><iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.openstreetmap.org/export/embed.html?bbox=14.15%2C35.78%2C14.65%2C36.08&amp;layer=mapnik" title="Illustrative location map"></iframe></div>
             <p class="small-note">The map is a placeholder, not a JD Auto business address.</p>
         </aside>
     </section>
+</main>
 </main>
 <footer class="site-footer">
     <div>
