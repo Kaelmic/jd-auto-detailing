@@ -47,8 +47,8 @@
 @media(max-width:700px) {
 
     .section-block,
-    .statement-section,
-    .cta-section {
+.statement-section,
+.cta-section {
         padding: 55px 6%;
     }
 
@@ -63,11 +63,11 @@
     }
 
     .services-grid,
-    .service-detail-grid,
-    .values-grid,
-    .gallery-grid,
-    .contact-layout,
-    .field-row {
+.service-detail-grid,
+.values-grid,
+.gallery-grid,
+.contact-layout,
+.field-row {
         grid-template-columns: 1fr;
     }
 
@@ -84,7 +84,7 @@
     }
 
     .contact-panel h2,
-    .contact-aside h2 {
+.contact-aside h2 {
         font-size: 30px;
     }
 }
@@ -92,8 +92,8 @@
 @media(prefers-reduced-motion:reduce) {
 
     *,
-    *::before,
-    *::after {
+*::before,
+*::after {
         scroll-behavior: auto !important;
         transition: none !important;
         animation: none !important;
@@ -159,7 +159,7 @@
     }
 
     .process-grid,
-    .why-grid {
+.why-grid {
         grid-template-columns: 1fr
     }
 
@@ -176,7 +176,7 @@
     }
 
     .lightbox {
-        padding: 12px
+        padding: 56px 12px 14px
     }
 
     .lightbox-controls button {
@@ -358,7 +358,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .home-page .site-header, .home-page .main-nav a::after { transition: none; }
+    .home-page .site-header,
+.home-page .main-nav a::after { transition: none; }
 }
 
 @media (max-width: 700px) {
@@ -411,8 +412,8 @@
 
 @media (prefers-reduced-motion: reduce) {
     .services-editorial-image img,
-    .editorial-service,
-    .service-arrow {
+.editorial-service,
+.service-arrow {
         transition: none;
     }
 }
@@ -486,7 +487,7 @@
 @media (max-width: 800px) {
     /* Logo left, BOOK + menu button right (the menu button used to sit in the middle column) */
     .home-page .site-header,
-    .home-page .site-header.is-scrolled {
+.home-page .site-header.is-scrolled {
         grid-template-columns: 1fr auto auto;
         gap: 12px;
     }
@@ -529,7 +530,7 @@
         padding: 18px 6%;
     }
 
-    .inner-page .site-header .logo { order: 1; width: clamp(100px, 30vw, 180px); }
+    .inner-page .site-header .logo { order: 1; width: clamp(124px, 36vw, 190px); }
     .inner-page .header-actions { order: 2; }
     .inner-page .menu-toggle { order: 3; margin-left: 0; }
 
@@ -547,7 +548,7 @@
 
     .inner-page .main-nav a { padding: 13px 0; }
     .inner-page .main-nav a::after,
-    .inner-page .main-nav a[aria-current="page"]::after { display: none; }
+.inner-page .main-nav a[aria-current="page"]::after { display: none; }
 }
 
 @media (max-width: 700px) {
@@ -559,23 +560,14 @@
 }
 
 /* ==========================================
-   ABOUT PAGE (TABLET / PHONE)
+   PAGE HERO + CLOSING LINE (TABLET / PHONE)
 ========================================== */
 
 @media (max-width: 800px) {
-    .page-hero,
-    .about-process,
-    .about-wont {
+    .page-hero {
         grid-template-columns: 1fr;
     }
-
-    .about-process-intro { position: static; }
-    .page-close { padding: 44px 6% 56px; }
-}
-
-@media (max-width: 480px) {
-    .about-step { grid-template-columns: 52px minmax(0, 1fr); gap: 6px 14px; }
-    .about-step-num { font-size: 32px; }
+    .page-close { padding: 44px 7% 56px; }
 }
 
 /* ==========================================
@@ -583,21 +575,74 @@
 ========================================== */
 
 @media (max-width: 1100px) {
-    .gallery-page .gallery-grid { column-count: 2; }
+    .gallery-page .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 800px) {
     .page-split { grid-template-columns: 1fr; }
 
-    .svc { grid-template-columns: 56px minmax(0, 1fr); }
-    .svc-img { grid-column: 1 / -1; }
-    .svc-num { font-size: 32px; }
+    .svc { grid-template-columns: minmax(0, 1fr); }
 
     .contact-page .contact-layout { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 600px) {
-    .gallery-page .gallery-grid { column-count: 1; }
+    .gallery-page .gallery-grid { grid-template-columns: 1fr; }
     .svc { grid-template-columns: 1fr; }
-    .svc-num { margin-bottom: -10px; }
+}
+
+/* ==========================================
+   ABOUT PAGE (TABLET / PHONE)
+========================================== */
+
+@media (max-width: 900px) {
+    .ab-hero { grid-template-columns: 1fr; padding-left: 6%; padding-right: 6%; }
+    .ab-hero-text { padding-right: 0; }
+    .ab-mark { aspect-ratio: 16 / 10; }
+
+    .ab-order { grid-template-columns: 1fr; }
+    .ab-order-intro { position: static; }
+
+    .ab-wont-list li { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+
+    .ab-pair { grid-template-columns: 1fr; }
+    .ab-fig:nth-child(2) { margin-top: 0; }
+}
+
+/* ==========================================
+   RESPONSIVE FIXES (ALL PAGES)
+========================================== */
+
+/* Desktop nav links: taller hit area, underline kept under the text */
+@media (min-width: 801px) {
+    .home-page .main-nav a,
+    .inner-page .main-nav a {
+        padding: 12px 0;
+    }
+
+    .home-page .main-nav a::after,
+    .inner-page .main-nav a::after {
+        bottom: 9px;
+    }
+}
+
+@media (max-width: 700px) {
+    .page-close { padding: 44px 6% 56px; }
+}
+
+@media (max-width: 600px) {
+    .gallery-page .gallery-filters { gap: 4px 18px; }
+}
+
+@media (max-width: 480px) {
+    .difference-filters { gap: 8px; }
+    .difference-filter { padding: 10px 15px; font-size: 11px; }
+}
+
+/* Page headings (services, gallery, contact): stack the intro under the heading on narrower laptops/tablets */
+@media (max-width: 1200px) {
+    .page-hero { grid-template-columns: 1fr; gap: 28px; }
 }

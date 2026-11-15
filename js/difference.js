@@ -14,18 +14,18 @@
     const examples = {
         exterior: {
             label: "Exterior detailing",
-            before: "images/exterior-before.png",
-            after: "images/exterior-after.png"
+            before: "images/home/exterior-before.png",
+            after: "images/home/exterior-after.png"
         },
         interior: {
             label: "Interior detailing",
-            before: "images/interior-before.png",
-            after: "images/interior-after.png"
+            before: "images/home/interior-before.png",
+            after: "images/home/interior-after.png"
         },
         coating: {
             label: "Ceramic coating",
-            before: "images/coating-before.png",
-            after: "images/coating-after.png"
+            before: "images/home/coating-before.png",
+            after: "images/home/coating-after.png"
         }
     };
 

@@ -1684,7 +1684,7 @@ button {
     border-radius: 0;
 }
 
-.home-page .hero-minimal .hero-marques > p{
+.home-page .hero-minimal .hero-marques > p {
     color: #B4B5B7;
     font-size: 12px;
 }
@@ -1949,7 +1949,7 @@ button {
 
 @media (max-width: 800px) {
     .home-page .site-header .logo {
-        width: clamp(100px, 30vw, 180px);
+        width: clamp(124px, 36vw, 190px);
     }
 }
 
@@ -2051,7 +2051,7 @@ button {
 }
 
 /* ==========================================
-   ABOUT PAGE — editorial layout (header and footer stay shared)
+   PAGE HERO + CLOSING LINE (shared by services, gallery, contact)
 ========================================== */
 
 .page-hero {
@@ -2086,142 +2086,14 @@ button {
     line-height: 1.8;
 }
 
-/* The order of work */
-
-.about-process {
-    display: grid;
-    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-    gap: clamp(30px, 6vw, 100px);
-    padding: clamp(70px, 8vw, 110px) 7%;
-}
-
-.about-process-intro {
-    position: sticky;
-    top: 110px;
-    align-self: start;
-}
-
-.about-process-intro h2,
-.about-wont h2,
 .page-close h2 {
     margin: 0 0 20px;
     font-family: "Rajdhani", sans-serif;
-    font-size: clamp(36px, 4.6vw, 64px);
+    font-size: clamp(32px, 4vw, 52px);
     font-weight: 700;
     line-height: 1;
     letter-spacing: -0.01em;
     text-transform: uppercase;
-}
-
-.about-process-intro p,
-.about-wont-intro p {
-    margin: 0;
-    max-width: 38ch;
-    color: #AEB0B2;
-    line-height: 1.8;
-}
-
-.about-steps {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    border-bottom: 1px solid rgba(243, 240, 233, 0.18);
-}
-
-.about-step {
-    display: grid;
-    grid-template-columns: 72px minmax(0, 1fr);
-    gap: 8px 20px;
-    padding: 30px 0 32px;
-    border-top: 1px solid rgba(243, 240, 233, 0.18);
-}
-
-.about-step-num {
-    font-family: "Rajdhani", sans-serif;
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 1;
-    color: #B49A68;
-}
-
-.about-step h3 {
-    margin: 0 0 10px;
-    font-size: 22px;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-}
-
-.about-step p {
-    margin: 0;
-    max-width: 56ch;
-    color: #AEB0B2;
-    line-height: 1.75;
-}
-
-/* Wide image band */
-
-.about-band {
-    margin: 0 7%;
-}
-
-.about-band img {
-    display: block;
-    width: 100%;
-    height: clamp(240px, 38vw, 520px);
-    object-fit: cover;
-    object-position: center 60%;
-    background: #1A1C1E;
-}
-
-.about-band figcaption {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-    flex-wrap: wrap;
-    padding-top: 12px;
-    color: #A9AAAC;
-    font-size: 12px;
-    letter-spacing: .04em;
-}
-
-/* What we won't do */
-
-.about-wont {
-    display: grid;
-    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-    gap: clamp(30px, 6vw, 100px);
-    padding: clamp(70px, 8vw, 110px) 7%;
-}
-
-.about-wont-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    border-bottom: 1px solid rgba(243, 240, 233, 0.18);
-}
-
-.about-wont-list li {
-    position: relative;
-    padding: 24px 0 24px 36px;
-    border-top: 1px solid rgba(243, 240, 233, 0.18);
-    color: #AEB0B2;
-    line-height: 1.7;
-}
-
-.about-wont-list li::before {
-    content: "—";
-    position: absolute;
-    left: 0;
-    color: #B49A68;
-}
-
-.about-wont-list strong {
-    display: block;
-    margin-bottom: 4px;
-    color: #F3F0E9;
-    font-size: 19px;
-    font-weight: 600;
-    letter-spacing: -0.015em;
 }
 
 /* Closing line (replaces the centred banner) */
@@ -2241,20 +2113,47 @@ button {
 }
 
 .page-close-links {
+    display: grid;
+    width: min(100%, 380px);
+    margin-left: auto;
+    border-bottom: 1px solid rgba(243, 240, 233, .18);
+}
+
+.page-close-links a {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    gap: 6px 32px;
+    justify-content: space-between;
+    gap: 20px;
+    min-height: 56px;
+    padding: 12px 0;
+    border-top: 1px solid rgba(243, 240, 233, .18);
+    color: #F3F0E9;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .16em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color .2s ease, padding-left .25s ease;
 }
 
-.page-close-links .hero-book-link {
-    font-size: 15px;
+.page-close-links a:first-child {
+    color: #B49A68;
 }
 
-.page-close-links .page-quiet {
-    color: #A9AAAC;
-    font-size: 14px;
-    letter-spacing: .03em;
+.page-close-links a span {
+    display: inline-block;
+    transition: transform .25s ease;
+}
+
+.page-close-links a:hover,
+.page-close-links a:focus-visible {
+    color: #D2BA8C;
+    padding-left: 8px;
+}
+
+.page-close-links a:hover span,
+.page-close-links a:focus-visible span {
+    transform: translateX(6px);
 }
 
 /* ==========================================
@@ -2307,7 +2206,7 @@ button {
 
 .svc {
     display: grid;
-    grid-template-columns: 72px minmax(0, 1.15fr) minmax(0, .85fr);
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
     gap: 24px clamp(24px, 4vw, 60px);
     align-items: start;
     padding: 46px 0 52px;
@@ -2318,12 +2217,13 @@ button {
     border-bottom: 1px solid rgba(243, 240, 233, 0.18);
 }
 
-.svc-num {
-    font-family: "Rajdhani", sans-serif;
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 1;
+.svc-tag {
+    margin: 0 0 14px;
     color: #B49A68;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .2em;
+    text-transform: uppercase;
 }
 
 .svc h2 {
@@ -2467,19 +2367,20 @@ button {
 }
 
 .gallery-page .gallery-grid {
-    display: block;
-    column-count: 3;
-    column-gap: 22px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px 22px;
 }
 
 .gallery-page .gallery-item {
-    break-inside: avoid;
-    margin: 0 0 26px;
+    margin: 0;
 }
 
+/* every tile the same size; the photo fills it and is cropped to fit */
 .gallery-page .gallery-item img {
-    aspect-ratio: auto;
+    aspect-ratio: 4 / 3;
     height: auto;
+    object-fit: cover;
 }
 
 .gallery-page .gallery-item figcaption {
@@ -2493,6 +2394,7 @@ button {
 .gallery-page .gallery-open {
     position: absolute;
     inset: 0 0 34px 0;
+    background: linear-gradient(to bottom, rgba(5, 6, 7, .55), transparent 32%);
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
@@ -2501,7 +2403,6 @@ button {
     padding: 14px;
     border: 0;
     border-radius: 0;
-    background: transparent;
     color: #F3F0E9;
     font-size: 11px;
     letter-spacing: .14em;
@@ -2581,21 +2482,42 @@ button {
     border-radius: 0;
 }
 
-.contact-steps li {
-    display: grid;
-    grid-template-columns: 40px minmax(0, 1fr);
-    gap: 4px 12px;
-    padding: 18px 0;
+.contact-steps {
+    border-bottom: 0;
+}
+
+.contact-steps > li {
+    position: relative;
+    padding: 0 0 28px 34px;
+    border-top: 0;
     color: #AEB0B2;
     line-height: 1.65;
 }
 
-.contact-steps li span {
-    font-family: "Rajdhani", sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 1.2;
-    color: #B49A68;
+/* a small hollow dot per step, joined by a thin line */
+.contact-steps > li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #B49A68;
+    border-radius: 50%;
+}
+
+.contact-steps > li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 24px;
+    bottom: 6px;
+    width: 1px;
+    background: rgba(180, 154, 104, .4);
+}
+
+.contact-steps > li:last-child {
+    padding-bottom: 0;
 }
 
 .contact-steps strong {
@@ -2621,4 +2543,699 @@ button {
 /* match the dark theme (the embedded map is light by default) */
 .contact-page .map-wrap iframe {
     filter: grayscale(1) invert(1) brightness(.85) contrast(1.1);
+}
+
+/* Running line (used on the home page) */
+
+.ticker {
+    overflow: hidden;
+    margin: 0;
+    padding: 22px 0;
+    border-top: 1px solid rgba(180, 154, 104, .35);
+    border-bottom: 1px solid rgba(180, 154, 104, .35);
+}
+
+.ticker-track {
+    display: flex;
+    width: max-content;
+    animation: ticker-run 38s linear infinite;
+}
+
+.ticker-track span {
+    flex: none;
+    padding-right: 36px;
+    font-family: "Rajdhani", sans-serif;
+    font-size: clamp(28px, 3.4vw, 46px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(243, 240, 233, .55);
+}
+
+.ticker-track span::after {
+    content: "/";
+    padding-left: 36px;
+    color: #B49A68;
+    -webkit-text-stroke: 0;
+}
+
+/* pause while someone hovers, so it can be read */
+.ticker:hover .ticker-track {
+    animation-play-state: paused;
+}
+
+@keyframes ticker-run {
+    to { transform: translateX(-50%); }
+}
+
+/* ==========================================
+   ABOUT PAGE
+   Headings use the same Archivo style as the home sections.
+========================================== */
+
+.ab-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) min(38vw, 540px);
+    gap: clamp(30px, 5vw, 80px);
+    align-items: center;
+    padding: clamp(50px, 6vw, 90px) 7% clamp(70px, 8vw, 110px) 7%;
+}
+
+.ab-hero h1 {
+    margin: 0 0 30px;
+    font-family: "Archivo", sans-serif;
+    font-size: clamp(46px, 6.2vw, 104px);
+    font-weight: 600;
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+}
+
+.ab-hero h1 span {
+    display: block;
+}
+
+.ab-lede {
+    margin: 0;
+    max-width: 44ch;
+    color: #C3C3C3;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* The logo, shown large in a quiet frame */
+
+.ab-mark {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 26px;
+    aspect-ratio: 5 / 4;
+    padding: 0 8%;
+    border: 1px solid rgba(180, 154, 104, .28);
+    background: #14161A;
+}
+
+.ab-mark-logo {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    aspect-ratio: 5.6 / 1;
+    overflow: hidden;
+}
+
+.ab-mark-logo img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    transform: translateY(-50%);
+}
+
+.ab-mark p {
+    margin: 0;
+    color: #A9AAAC;
+    font-size: 12px;
+    letter-spacing: .24em;
+    text-transform: uppercase;
+}
+
+/* The order of work, written as a paragraph rather than a widget */
+
+.ab-order {
+    display: grid;
+    grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+    gap: clamp(30px, 6vw, 100px);
+    padding: clamp(70px, 8vw, 120px) 7%;
+    border-top: 1px solid rgba(180, 154, 104, .28);
+}
+
+.ab-order h2,
+.ab-wont h2 {
+    margin: 0;
+    font-family: "Archivo", sans-serif;
+    font-size: clamp(34px, 4vw, 62px);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+}
+
+.ab-order-intro {
+    position: sticky;
+    top: 110px;
+    align-self: start;
+}
+
+.ab-order-intro p {
+    margin: 20px 0 0;
+    max-width: 30ch;
+    color: #AEB0B2;
+    line-height: 1.8;
+}
+
+.ab-flow {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ab-flow li {
+    margin-bottom: 34px;
+    color: #8F9193;
+    font-size: clamp(21px, 2.2vw, 30px);
+    line-height: 1.45;
+    letter-spacing: -0.02em;
+}
+
+.ab-flow li:last-child {
+    margin-bottom: 0;
+}
+
+.ab-flow li::before {
+    content: attr(data-step);
+    display: block;
+    margin-bottom: 8px;
+    color: #B49A68;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+.ab-flow strong {
+    color: #F3F0E9;
+    font-weight: 600;
+}
+
+/* Same seat, same light */
+
+.ab-pair {
+    display: grid;
+    grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+    gap: clamp(24px, 4vw, 56px);
+    align-items: start;
+    padding: 0 7% clamp(80px, 9vw, 130px);
+}
+
+.ab-fig {
+    margin: 0;
+}
+
+.ab-fig:nth-child(2) {
+    margin-top: clamp(40px, 8vw, 120px);
+}
+
+.ab-fig img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    background: #1A1C1E;
+}
+
+.ab-fig figcaption {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding-top: 12px;
+    color: #A9AAAC;
+    font-size: 12px;
+    letter-spacing: .04em;
+}
+
+.ab-fig figcaption b {
+    color: #B49A68;
+    font-weight: 600;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+.ab-pair-note {
+    grid-column: 1 / -1;
+    margin: 6px 0 0;
+    max-width: 50ch;
+    color: #C3C3C3;
+    font-size: 20px;
+    line-height: 1.6;
+    letter-spacing: -0.015em;
+}
+
+.ab-pair-note small {
+    display: block;
+    margin-top: 12px;
+    color: #A9AAAC;
+    font-size: 12px;
+    letter-spacing: .04em;
+}
+
+/* What we won't do */
+
+.ab-wont {
+    padding: 0 7% clamp(70px, 8vw, 110px);
+}
+
+.ab-wont h2 {
+    margin-bottom: 40px;
+}
+
+.ab-wont-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: 1px solid rgba(243, 240, 233, .18);
+}
+
+.ab-wont-list li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
+    gap: 10px clamp(24px, 5vw, 80px);
+    align-items: baseline;
+    padding: 26px 0;
+    border-top: 1px solid rgba(243, 240, 233, .18);
+}
+
+.ab-struck {
+    font-size: clamp(24px, 3vw, 40px);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+    text-decoration: line-through;
+    text-decoration-color: #B49A68;
+    text-decoration-thickness: 2px;
+}
+
+.ab-wont-list p {
+    margin: 0;
+    color: #AEB0B2;
+    line-height: 1.7;
+}
+
+/* Gallery lightbox: picture centred, arrows on either side */
+.lightbox-stage {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 14px;
+}
+
+.lightbox img {
+    display: block;
+    margin: 0 auto;
+}
+
+.lightbox-prev,
+.lightbox-next {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    padding: 0 0 4px;
+    border: 1px solid #B49A68;
+    border-radius: 50%;
+    background: transparent;
+    color: #F3F0E9;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover,
+.lightbox-prev:focus-visible,
+.lightbox-next:focus-visible {
+    background: #B49A68;
+    color: #111315;
+}
+
+.lightbox-caption {
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    .lightbox-stage {
+        gap: 8px;
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+        width: 36px;
+        height: 36px;
+        font-size: 24px;
+    }
+}
+/* Fixed WhatsApp button (all pages) */
+.wa-float {
+    position: fixed;
+    right: clamp(16px, 2.5vw, 32px);
+    bottom: clamp(16px, 2.5vw, 32px);
+    z-index: 60;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 0 22px 0 18px;
+    border: 1px solid #B49A68;
+    border-radius: 999px;
+    background: rgba(17, 19, 21, .92);
+    color: #D2BA8C;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .45);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+
+.wa-float:hover,
+.wa-float:focus-visible {
+    background: #B49A68;
+    color: #111315;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .wa-float {
+        width: 52px;
+        height: 52px;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .wa-float span {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+    }
+}
+
+/* ==========================================
+   PARALLAX + LOAD-IN
+   (js/parallax.js moves the layers on scroll; these rules run on load)
+========================================== */
+
+/* images sit slightly oversized in their frame so they can drift without showing an edge */
+.px-img {
+    scale: 1.15;
+    will-change: translate;
+}
+
+@keyframes px-rise {
+    from { opacity: 0; transform: translate3d(0, 34px, 0); }
+    to   { opacity: 1; transform: none; }
+}
+
+@keyframes px-fade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes px-settle {
+    from { scale: 1.38; }
+    to   { scale: 1.15; }
+}
+
+.hero-minimal .hero-content,
+.page-hero h1,
+.ab-hero-text {
+    animation: px-rise 1s cubic-bezier(.2, .7, .2, 1) both;
+}
+
+.page-hero p,
+.ab-mark {
+    animation: px-rise 1s cubic-bezier(.2, .7, .2, 1) .15s both;
+}
+
+.hero-minimal .hero-image {
+    animation: px-fade 1.2s ease .1s both;
+}
+
+.hero-minimal .hero-image img.px-img {
+    animation: px-settle 2s cubic-bezier(.2, .7, .2, 1) both;
+}
+
+.hero-minimal .hero-book {
+    animation: px-rise 1s cubic-bezier(.2, .7, .2, 1) .35s both;
+}
+
+.hero-minimal .hero-marques {
+    animation: px-rise 1s cubic-bezier(.2, .7, .2, 1) .5s both;
+}
+
+/* Scroll reveal (classes are added by js/parallax.js, so nothing is hidden without JavaScript) */
+
+.rv,
+.rv-frame {
+    opacity: 0;
+}
+
+@keyframes rv-rise {
+    from { opacity: 0; transform: translate3d(0, var(--rv-y, 36px), 0); }
+    to   { opacity: 1; transform: none; }
+}
+
+@keyframes rv-frame {
+    from { opacity: 0; transform: translate3d(0, 70px, 0); clip-path: inset(16% 0 0 0); }
+    to   { opacity: 1; transform: none; clip-path: inset(0 0 0 0); }
+}
+
+.rv.is-in {
+    animation: rv-rise 1s cubic-bezier(.2, .7, .2, 1) var(--rv-d, 0ms) both;
+}
+
+.rv-frame.is-in {
+    animation: rv-frame 1.3s cubic-bezier(.2, .7, .2, 1) var(--rv-d, 0ms) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rv,
+    .rv-frame {
+        opacity: 1;
+    }
+}
+
+/* ==========================================
+   LOADING SCREEN
+   Two halves meet at a gold line. When the page is ready they slide apart,
+   carrying the logo (top half) and the tagline (bottom half) away with them.
+   (Only shown when js sets html.is-loading, so nothing is ever stuck without JavaScript.)
+========================================== */
+
+/* keep the scrollbar's space reserved, so locking and unlocking scroll never shifts the page sideways */
+html {
+    scrollbar-gutter: stable;
+}
+
+html.is-loading {
+    overflow: hidden;
+    background: #0A0B0C;
+}
+
+.loader {
+    display: none;
+}
+
+html.is-loading .loader,
+.loader.is-done {
+    display: block;
+}
+
+.loader {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+}
+
+.loader.is-done {
+    pointer-events: none;
+}
+
+.loader-panel {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50.1%;
+    background: #0A0B0C;
+    will-change: transform;
+    transition: transform 1.1s cubic-bezier(.76, 0, .24, 1) .12s;
+}
+
+.loader-panel-top {
+    top: 0;
+}
+
+.loader-panel-bottom {
+    bottom: 0;
+}
+
+.loader.is-done .loader-panel-top {
+    transform: translate3d(0, -101%, 0);
+}
+
+.loader.is-done .loader-panel-bottom {
+    transform: translate3d(0, 101%, 0);
+}
+
+/* the logo sits just above the seam, cropped the same way as the header logo */
+.loader-mark {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    width: clamp(220px, 32vw, 400px);
+    margin-inline: auto;
+    aspect-ratio: 5.6 / 1;
+    overflow: hidden;
+    animation: ld-rise .9s cubic-bezier(.2, .7, .2, 1) .1s both;
+}
+
+.loader-mark img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    transform: translateY(-50%);
+}
+
+.loader-tagline {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: 0;
+    color: #A9AAAC;
+    font-size: 12px;
+    letter-spacing: .28em;
+    text-align: center;
+    text-transform: uppercase;
+    animation: ld-fade .8s ease .7s both;
+}
+
+/* the line is exactly on the seam, so the halves split along it */
+.loader-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: 2;
+    width: clamp(170px, 24vw, 280px);
+    height: 1px;
+    margin: -.5px auto 0;
+    background: rgba(180, 154, 104, .22);
+    transition: opacity .3s ease;
+}
+
+.loader.is-done .loader-line {
+    opacity: 0;
+}
+
+.loader-line span {
+    display: block;
+    height: 100%;
+    background: #B49A68;
+    transform: scaleX(0);
+    transform-origin: center;
+    animation: ld-line 1.7s cubic-bezier(.65, 0, .35, 1) .25s forwards;
+}
+
+@keyframes ld-line {
+    to { transform: scaleX(1); }
+}
+
+@keyframes ld-rise {
+    from { opacity: 0; translate: 0 14px; }
+    to   { opacity: 1; translate: 0 0; }
+}
+
+@keyframes ld-fade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* the page's own entrance animations wait until the screen is opening */
+html.is-loading main,
+html.is-loading main * {
+    animation-play-state: paused !important;
+}
+
+@media (max-width: 600px) {
+    .loader-tagline {
+        font-size: 10px;
+        letter-spacing: .22em;
+    }
+}
+
+/* PHOTO CREDITS */
+.credits {
+    width: min(1100px, 88%);
+    margin: 0 auto;
+    padding: 70px 0 20px;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+}
+
+.credits h2 {
+    margin: 0 0 12px;
+    font-size: clamp(24px, 3vw, 32px);
+}
+
+.credits > p {
+    margin: 0 0 28px;
+    color: #A9AAAC;
+    font-size: 15px;
+}
+
+.credits-cols {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 48px;
+}
+
+.credits-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    color: #A9AAAC;
+}
+
+.credits-list li {
+    padding: 9px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, .06);
+}
+
+.credits-list span {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 11px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: #B49A68;
+}
+
+.credits-list a {
+    color: #F2F2F2;
+    text-decoration: underline;
+    text-decoration-color: rgba(180, 154, 104, .5);
+    text-underline-offset: 3px;
+}
+
+.credits-list a:hover {
+    color: #B49A68;
+}
+
+@media (max-width: 700px) {
+    .credits-cols { grid-template-columns: 1fr; }
 }

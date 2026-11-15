@@ -37,7 +37,9 @@
       const original = fig.querySelector('img');
       const img = dialog.querySelector('img');
       img.src = original.src;img.alt = original.alt;
-      dialog.querySelector('.lightbox-caption').textContent = fig.querySelector('figcaption')?.textContent || '';
+      const cap = fig.querySelector('figcaption')?.textContent || '';
+      const credit = fig.dataset.credit || '';
+      dialog.querySelector('.lightbox-caption').textContent = credit ? (cap ? cap + ' · ' + credit : credit) : cap;
     };
     figures.forEach(fig => fig.querySelector('.gallery-open')?.addEventListener('click', () => {
       show(figures.filter(f=>!f.hidden).indexOf(fig));dialog.showModal();
