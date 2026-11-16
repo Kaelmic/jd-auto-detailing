@@ -70,7 +70,7 @@
             if (caption) {
                 const strong = document.createElement("strong");
                 strong.textContent = selected.label;
-                caption.replaceChildren(strong, " — AI-generated illustrative comparison");
+                caption.replaceChildren(strong, " - AI-generated illustrative comparison");
             }
 
             // Reset the slider to the middle.
