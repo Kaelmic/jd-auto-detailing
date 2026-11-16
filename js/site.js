@@ -9,7 +9,7 @@
     };
     toggle.addEventListener('click', () => setOpen(!nav.classList.contains('is-open')));
     nav.addEventListener('click', e => { if (e.target.closest('a')) setOpen(false); });
-  
+
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape' && nav.classList.contains('is-open')) { setOpen(false); toggle.focus(); }
     });

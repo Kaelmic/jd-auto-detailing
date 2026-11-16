@@ -9,7 +9,7 @@
 
     if (!comparison || !comparisonRange || !afterImage || !beforeImage) return;
 
-    
+
     const examples = {
         exterior: {
             label: "Exterior detailing",
@@ -32,7 +32,7 @@
         comparison.style.setProperty("--split", value + "%");
     };
 
-    
+
     comparisonRange.addEventListener("input", () => setSplit(comparisonRange.value));
 
 
@@ -57,23 +57,23 @@
             const selected = examples[button.dataset.example];
             if (!selected) return;
 
-            
+
             beforeImage.src = selected.before;
             afterImage.src = selected.after;
             afterImage.alt = selected.label + " — AI-generated after view";
 
-            
+
             if (caption) {
                 const strong = document.createElement("strong");
                 strong.textContent = selected.label;
                 caption.replaceChildren(strong, " - AI-generated illustrative comparison");
             }
 
-            
+
             comparisonRange.value = 50;
             setSplit(50);
 
-            
+
             filters.forEach((b) => {
                 const active = b === button;
                 b.classList.toggle("is-selected", active);

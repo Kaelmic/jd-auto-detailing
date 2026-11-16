@@ -57,26 +57,26 @@
     if (!("IntersectionObserver" in window)) return;
 
     const reveals = [
-        // home
+
         { sel: ".services-editorial-content h2, .services-editorial-intro, .editorial-service", y: 36 },
         { sel: ".services-editorial-image, .craftsmanship-image, .comparison", frame: true },
         { sel: ".difference-heading, .difference-bottom, .difference-disclaimer", y: 36 },
         { sel: ".craftsmanship-content > *", y: 36 },
         { sel: ".cta-section > :not(.eyebrow)", y: 36 },
-        // about
+
         { sel: ".ab-order-intro > *, .ab-flow li, .ab-pair-note, .ab-wont h2, .ab-wont-list li", y: 40 },
         { sel: ".ab-fig img", frame: true },
-        // services
+
         { sel: ".svc-tag, .svc h2, .svc-lead, .svc dl, .svc .hero-book-link", y: 36 },
         { sel: ".svc-img", frame: true },
         { sel: ".page-split-intro > *, .choose li, .faq-list details", y: 36 },
-        // gallery
+
         { sel: ".gallery-toolbar, .gallery-disclaimer", y: 28 },
         { sel: ".gallery-item", y: 60 },
-        // contact
+
         { sel: ".contact-panel > h2, .contact-panel > .form-notice, .contact-form .field-row, .contact-form > label, .contact-form > button", y: 34 },
         { sel: ".contact-aside > h2, .contact-aside > h3, .contact-aside > p, .contact-steps > li, .map-wrap", y: 34 },
-        // shared closing line
+
         { sel: ".page-close h2, .page-close-links", y: 36 }
     ];
 

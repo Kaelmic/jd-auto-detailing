@@ -69,7 +69,7 @@ body {
     color: #B49A68;
 }
 
-/* Base hero and buttons */
+
 
 .hero {
     padding: 40px 7% 80px;
@@ -144,7 +144,7 @@ body {
     color: #B49A68;
 }
 
-/* Shared sections, pages, forms and footer */
+
 
 :root {
     --ink: #111315;
@@ -593,7 +593,7 @@ textarea::placeholder {
     height: 100%;
 }
 
-/* Before-and-after comparison */
+
 
 .difference-section {
     padding: 86px 7%;
@@ -792,7 +792,7 @@ textarea::placeholder {
     max-width: 900px;
 }
 
-/* Accessibility, menus, galleries and supporting components */
+
 
 html {
     scroll-behavior: smooth;
@@ -1070,7 +1070,7 @@ button {
     color: #B49A68;
 }
 
-/* Cinematic hero variant and marque typography */
+
 
 .hero-cinematic {
     position: relative;
@@ -1270,7 +1270,7 @@ button {
     letter-spacing: .03em;
 }
 
-/* Minimal hero variant */
+
 
 .hero-minimal .hero-content {
     position: relative;
@@ -1327,7 +1327,7 @@ button {
     margin-top: 15px;
 }
 
-/* Homepage navigation and hero typography */
+
 
 .home-page .logo-name {
     font-family: "Teko", sans-serif;
@@ -1432,7 +1432,7 @@ button {
     padding: 0;
 }
 
-/* Editorial services */
+
 
 .services-editorial {
     display: grid;
@@ -1511,7 +1511,7 @@ button {
     padding-left: 8px;
 }
 
-/* Craftsmanship: text left, image right */
+
 
 .craftsmanship {
     display: grid;
@@ -1585,7 +1585,7 @@ button {
     transform: scale(1.035);
 }
 
-/* Homepage hero layout and image */
+
 
 .home-page .hero-minimal {
     position: relative;
@@ -1628,7 +1628,7 @@ button {
     mask-image: none;
 }
 
-/* Fade every image edge into the exact hero background color. */
+
 .home-page .hero-minimal .hero-image::before {
     content: "";
     display: block;
@@ -1725,7 +1725,7 @@ button {
 
 
 
-/* Homepage header layout, actions and final alignment */
+
 
 .home-page .site-header {
     z-index: 50;
@@ -1854,7 +1854,7 @@ button {
     text-align: center;
 }
 
-/* Homepage hero: supporting line, and the booking line under the image */
+
 
 .home-page .hero-minimal .hero-description {
     max-width: 760px;
@@ -2012,7 +2012,7 @@ button {
     right: 0;
 }
 
-/* the current page keeps its underline here (the shared rule above hides it) */
+
 .inner-page .main-nav a[aria-current="page"]::after {
     display: block;
     right: 0;
@@ -2023,12 +2023,12 @@ button {
     color: #B49A68;
 }
 
-/* anchors from the home page (services.html#paint-correction) land below the sticky header */
+
 .inner-page [id] {
     scroll-margin-top: 96px;
 }
 
-/* Footer: logo image + links, identical on every page */
+
 .footer-brand-image {
     width: 180px;
 }
@@ -2037,9 +2037,9 @@ button {
     margin: 6px 0 0;
 }
 
-/* ==========================================
-   PAGE HERO + CLOSING LINE (shared by services, gallery, contact)
-========================================== */
+
+
+
 
 .page-hero {
     display: grid;
@@ -2083,7 +2083,7 @@ button {
     text-transform: uppercase;
 }
 
-/* Closing line (replaces the centred banner) */
+
 
 .page-close {
     display: flex;
@@ -2143,9 +2143,9 @@ button {
     transform: translateX(6px);
 }
 
-/* ==========================================
-   SHARED PAGE PIECES (services, gallery, contact)
-========================================== */
+
+
+
 
 .page-split {
     display: grid;
@@ -2185,7 +2185,7 @@ button {
     border-top: 1px solid rgba(243, 240, 233, 0.18);
 }
 
-/* ---------- Services ---------- */
+
 
 .svc-list {
     padding: clamp(50px, 6vw, 80px) 7% 0;
@@ -2318,7 +2318,7 @@ button {
     max-width: 56ch;
 }
 
-/* ---------- Gallery ---------- */
+
 
 .gallery-page .gallery-section {
     padding-top: clamp(40px, 5vw, 60px);
@@ -2363,7 +2363,7 @@ button {
     margin: 0;
 }
 
-/* every tile the same size; the photo fills it and is cropped to fit */
+
 .gallery-page .gallery-item img {
     aspect-ratio: 4 / 3;
     height: auto;
@@ -2377,7 +2377,7 @@ button {
     letter-spacing: .04em;
 }
 
-/* the whole picture is the button; the label sits quietly in the corner */
+
 .gallery-page .gallery-open {
     position: absolute;
     inset: 0 0 34px 0;
@@ -2411,7 +2411,7 @@ button {
     color: #A9AAAC;
 }
 
-/* ---------- Contact ---------- */
+
 
 .contact-page .contact-layout {
     grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
@@ -2481,7 +2481,7 @@ button {
     line-height: 1.65;
 }
 
-/* a small hollow dot per step, joined by a thin line */
+
 .contact-steps > li::before {
     content: "";
     position: absolute;
@@ -2706,7 +2706,7 @@ button {
     font-weight: 600;
 }
 
-/* Same seat, same light */
+
 
 .ab-pair {
     display: grid;
@@ -2767,7 +2767,7 @@ button {
     letter-spacing: .04em;
 }
 
-/* What we won't do */
+
 
 .ab-wont {
     padding: 0 7% clamp(70px, 8vw, 110px);
@@ -2809,7 +2809,7 @@ button {
     line-height: 1.7;
 }
 
-/* Gallery lightbox: picture centred, arrows on either side */
+
 .lightbox-stage {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr) auto;
@@ -2863,7 +2863,7 @@ button {
         font-size: 24px;
     }
 }
-/* Fixed WhatsApp button (all pages) */
+
 .wa-float {
     position: fixed;
     right: clamp(16px, 2.5vw, 32px);
@@ -3134,7 +3134,7 @@ html.is-loading main * {
     }
 }
 
-/* PHOTO CREDITS */
+
 .credits {
     width: min(1100px, 88%);
     margin: 0 auto;

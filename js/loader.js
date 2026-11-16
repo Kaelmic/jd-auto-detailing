@@ -17,7 +17,7 @@
         finished = true;
         try { sessionStorage.setItem("jd-loaded", "1"); } catch (e) {}
         loader.classList.add("is-done");
-        
+
         setTimeout(() => root.classList.remove("is-loading"), 450);
         setTimeout(() => loader.remove(), 1800);
     };
