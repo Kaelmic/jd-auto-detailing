@@ -1,4 +1,3 @@
-// JD Auto shared interactions — no backend, no stored personal data.
 (() => {
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.main-nav');
@@ -10,12 +9,12 @@
     };
     toggle.addEventListener('click', () => setOpen(!nav.classList.contains('is-open')));
     nav.addEventListener('click', e => { if (e.target.closest('a')) setOpen(false); });
-    // Escape closes the menu and returns focus to the button
+  
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape' && nav.classList.contains('is-open')) { setOpen(false); toggle.focus(); }
     });
   }
-  // Gallery category filters and accessible dialog lightbox.
+
   const figures = [...document.querySelectorAll('.gallery-item')];
   const buttons = [...document.querySelectorAll('.gallery-filter')];
   const count = document.querySelector('.gallery-count');
@@ -50,7 +49,7 @@
     dialog.addEventListener('click', e => {if(e.target===dialog)dialog.close();});
     dialog.addEventListener('keydown', e => {if(e.key==='ArrowLeft')show(index-1);if(e.key==='ArrowRight')show(index+1);});
   }
-  // Contact enquiry is a local preview, not a submission.
+
   const form = document.getElementById('enquiry-form');
   if (form) {
     const selected = new URLSearchParams(window.location.search).get('service');

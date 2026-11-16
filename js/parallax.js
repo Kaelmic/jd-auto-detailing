@@ -1,11 +1,6 @@
-// JD Auto — parallax on load and on scroll.
-// Images drift inside their frames; hero text and panels lift away at a different speed.
-// Does nothing for people who prefer reduced motion.
 (() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    // frame: image moves inside its (overflow hidden) frame, relative to the viewport centre
-    // text:  element drifts with the scroll position, so it leaves the top at a different speed
     const targets = [
         { sel: ".hero-minimal .hero-image img", speed: 0.07, frame: true },
         { sel: ".services-editorial-image img", speed: 0.07, frame: true },
@@ -25,7 +20,7 @@
             layers.push({ el, speed, frame: !!frame, host: frame ? el.parentElement : null });
         });
     });
-    const HEADROOM = 0.075; // matches scale(1.15): 7.5% spare on each side
+    const HEADROOM = 0.075; 
     let vh = window.innerHeight;
     let queued = false;
 
@@ -59,10 +54,6 @@
         update();
     }
 
-    // ---- Scroll reveal --------------------------------------------------------
-    // Each piece rises into place as it enters the screen. Text, rows and frames travel
-    // different distances, and pieces that arrive together are staggered, so the page
-    // builds up in layers instead of appearing all at once.
     if (!("IntersectionObserver" in window)) return;
 
     const reveals = [
@@ -110,7 +101,7 @@
             el.style.setProperty("--rv-d", Math.min(n, 5) * 90 + "ms");
             n++;
             el.classList.add("is-in");
-            // hand the element back to its normal styles once it has arrived
+
             el.addEventListener("animationend", () => {
                 el.classList.remove("rv", "rv-frame", "is-in");
                 el.style.removeProperty("--rv-y");

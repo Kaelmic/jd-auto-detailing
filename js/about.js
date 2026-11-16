@@ -1,4 +1,3 @@
-// JD Auto — numbered marks on the about-page photo highlight the matching note.
 (() => {
     const pins = [...document.querySelectorAll(".ab-pin")];
     const notes = [...document.querySelectorAll(".ab-note")];

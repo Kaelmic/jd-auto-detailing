@@ -159,7 +159,7 @@
     }
 
     .process-grid,
-.why-grid {
+    .why-grid {
         grid-template-columns: 1fr
     }
 
