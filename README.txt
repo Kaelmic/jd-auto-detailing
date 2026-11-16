@@ -1,28 +1,37 @@
-PRIMEX AUTO DETAILING — PREMIUM ENHANCED WEBSITE
+JD AUTO DETAILING STUDIO (CONCEPT WEBSITE)
 
-Open index.html in a browser. The site includes five pages.
+A five-page website for a made-up car detailing studio in Malta. I built it for my Web Design course. The business, the address, the prices and the results shown are not real.
 
-Features:
-- Original charcoal and champagne-gold theme
-- Responsive mobile navigation
-- Interactive Before/After visual demonstration (keyboard/touch capable)
-- Gallery filters and photo lightbox
-- Process and Why PrimeX sections
-- Services comparison and FAQ accordion
-- Service-to-contact preselection
-- Client-side enquiry preview and copy button (NO submission)
-- Semantic HTML, keyboard focus states and reduced-motion support
+HOW TO OPEN IT
+Open index.html in a browser. The other four pages are in the pages folder and are reached from the menu.
 
-IMPORTANT:
-1. PrimeX is a fictional concept. No business contact details, bookings, customer reviews, or results are claimed.
-2. Comparison uses a filter on illustrative stock imagery, not genuine before/after photographs.
-3. Gallery imagery loads from Unsplash and requires internet access; check licensing before publishing.
-4. Contact form never sends or stores data. A real business needs a secure backend or form service.
-5. Replace illustrative photographs and fictional content before a real commercial launch.
+FOLDERS
+index.html            Home page
+pages/                about.html, services.html, gallery.html, contact.html
+css/                  maincss.css (all the styles), responsive.css (loaded after it)
+js/                   site.js, nav-scroll.js, difference.js, parallax.js, loader.js
+images/               logos, favicon, home, about, services, gallery, svg (marque logos)
 
+WHAT IT HAS
+- Dark theme (#111315) with a gold accent, and the same header and footer on every page
+- Opening screen that plays once per visit (add ?loader to a page address to see it again)
+- Parallax on the hero and images, and content that rises into place as you scroll
+- Before and after slider on the home page (works with mouse, touch and keyboard)
+- Services page with a short FAQ and links that preselect the service on the contact form
+- Gallery with filters and a lightbox (arrows on each side, keyboard arrows and Escape work too)
+- Contact form that only shows a preview of the enquiry and lets you copy it
+- Fixed WhatsApp button on every page
+- Photo credits section on the About page, linked from the footer
+- Mobile menu, skip link, visible focus states and reduced motion support
 
-CINEMATIC HERO UPDATE
-- Replaced the homepage hero with a full-bleed photo, large two-tone headline and centered CTA buttons.
-- Removed eyebrow, trust bullets, and all ratings/statistics.
-- Added automotive marque names as text, not official logos or endorsements.
-- Photography requires internet. For a final offline-ready project, download a licensed hero image and update the hero img src.
+THINGS TO KNOW
+1. The WhatsApp number is a placeholder (00000000000) in the wa.me link at the bottom of every page. Replace it with a real number, including the country code and no plus sign, before using it.
+2. The contact form never sends or stores anything. A real business would need a form service or a backend.
+3. The fonts (Archivo, Rajdhani, Teko) load from Google Fonts, so they need an internet connection. Without it the browser falls back to Arial.
+4. The before and after images and the seat photos on the About page are AI-generated illustrations, and they are labelled that way on the site. They are not customer results.
+5. The gallery, home and services photos are stock photos from Unsplash and Pexels. Each photographer is credited in the Photo credits section on the About page, and in the gallery lightbox caption. The Exterior Detailing photo credit shows the name from the Pexels page.
+6. The car brand logos on the home page are only there to show the kind of cars the studio would like to work on. The site says it is not affiliated with them.
+7. Before using any of this for a real business, replace the stock photos and the made-up content and check the licences again.
+
+BUILT WITH
+Plain HTML, CSS and JavaScript. No frameworks and no build step. I used AI tools to help with parts of the design and code.
