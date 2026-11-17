@@ -3,7 +3,10 @@ JD AUTO DETAILING STUDIO (CONCEPT WEBSITE)
 A five-page website for a made-up car detailing studio in Malta. I built it for my Web Design course. This is a fictional business. No real bookings are taken, and the illustrative images do not show work completed by JD Auto.
 
 HOW TO OPEN IT
-Open index.html in a browser. The other four pages are in the pages folder and are reached from the menu.
+Open index.html in a browser. The other four pages are in the pages folder and are reached from the menu. The live version is at https://jdauto.primeridgestudios.com/
+
+SUBMITTED WITH THE SITE
+JD-Auto-Website-Planning-Document (PDF and Word): website name, brief, objectives, audience, user journey, site structure, wireframes, workflow and a list of the changes I made while building it.
 
 FOLDERS
 index.html            Home page
@@ -21,7 +24,7 @@ WHAT IT HAS
 - Gallery with filters and a lightbox (arrows on each side, keyboard arrows and Escape work too)
 - Contact form that only shows a preview of the enquiry and lets you copy it
 - Fixed WhatsApp button on every page
-- Photo credits section on the About page, linked from the footer
+- Photo credits section on the About page (grouped as Home, Services and Gallery), linked from the footer
 - Mobile menu, skip link, visible focus states and reduced motion support
 
 THINGS TO KNOW
@@ -29,7 +32,7 @@ THINGS TO KNOW
 2. The contact form never sends or stores anything. A real business would need a form service or a backend.
 3. The fonts (Archivo, Rajdhani, Teko) load from Google Fonts, so they need an internet connection. Without it the browser falls back to Arial.
 4. The before and after images and the seat photos on the About page are AI-generated illustrations, and they are labelled that way on the site. They are not customer results.
-5. The gallery, home and services photos are stock photos from Unsplash and Pexels. Each photographer is credited in the Photo credits section on the About page, and in the gallery lightbox caption. The Exterior Detailing photo credit shows the name from the Pexels page.
+5. The hero, closing, services and gallery photos are stock photos from Unsplash and Pexels. Each photographer is credited in the Photo credits section on the About page, grouped as Home, Services and Gallery, and in the gallery lightbox caption. The Exterior Detailing credit shows the name from the Pexels page.
 6. The car brand logos on the home page are only there to show the kind of cars the studio would like to work on. The site says it is not affiliated with them.
 7. Before using any of this for a real business, replace the stock photos and the made-up content and check the licences again.
 
