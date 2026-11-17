@@ -132,6 +132,13 @@ body {
 
 .btn-primary:hover {
     background-color: #D2BA8C;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(180, 154, 104, 0.28);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 10px rgba(180, 154, 104, 0.2);
 }
 
 .btn-secondary {
@@ -2037,10 +2044,6 @@ button {
     margin: 6px 0 0;
 }
 
-
-
-
-
 .page-hero {
     display: grid;
     grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
@@ -2582,13 +2585,14 @@ button {
     padding: clamp(50px, 6vw, 90px) 7% clamp(70px, 8vw, 110px) 7%;
 }
 
-.ab-hero h1 {
-    margin: 0 0 30px;
-    font-family: "Archivo", sans-serif;
-    font-size: clamp(46px, 6.2vw, 104px);
-    font-weight: 600;
-    line-height: 1.02;
-    letter-spacing: -0.045em;
+.ab-hero-text h1 {
+    font-family: "Teko", sans-serif;
+    font-size: clamp(48px, 6vw, 912px);
+    font-weight: 100;
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 0;
+    margin: 0 0 28px;
 }
 
 .ab-hero h1 span {
@@ -3194,4 +3198,30 @@ html.is-loading main * {
 
 @media (max-width: 700px) {
     .credits-cols { grid-template-columns: 1fr; }
+}
+
+.hero-book-link {
+    transition:
+        color .2s ease,
+        background-size .2s ease,
+        transform .35s cubic-bezier(.2, .8, .2, 1);
+}
+
+.hero-book-link span {
+    transform-origin: left center;
+    transition: transform .45s cubic-bezier(.3, 1.5, .5, 1);
+}
+
+.hero-book-link:hover,
+.hero-book-link:focus-visible {
+    transform: translateX(4px);
+}
+
+.hero-book-link:hover span,
+.hero-book-link:focus-visible span {
+    transform: translateX(10px) scaleX(1.25);
+}
+
+.hero-book-link:active {
+    transform: translateX(2px);
 }

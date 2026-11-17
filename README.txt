@@ -1,6 +1,6 @@
 JD AUTO DETAILING STUDIO (CONCEPT WEBSITE)
 
-A five-page website for a made-up car detailing studio in Malta. I built it for my Web Design course. The business, the address, the prices and the results shown are not real.
+A five-page website for a made-up car detailing studio in Malta. I built it for my Web Design course. This is a fictional business. No real bookings are taken, and the illustrative images do not show work completed by JD Auto.
 
 HOW TO OPEN IT
 Open index.html in a browser. The other four pages are in the pages folder and are reached from the menu.
@@ -32,6 +32,9 @@ THINGS TO KNOW
 5. The gallery, home and services photos are stock photos from Unsplash and Pexels. Each photographer is credited in the Photo credits section on the About page, and in the gallery lightbox caption. The Exterior Detailing photo credit shows the name from the Pexels page.
 6. The car brand logos on the home page are only there to show the kind of cars the studio would like to work on. The site says it is not affiliated with them.
 7. Before using any of this for a real business, replace the stock photos and the made-up content and check the licences again.
+
+PRICING
+No fixed prices are displayed. The website directs visitors to make an enquiry because a quote would depend on the vehicle's size, condition and the service required. Prices and estimated times would be confirmed after assessing the car. This is a demonstration only; no real quotes or bookings are provided.
 
 BUILT WITH
 Plain HTML, CSS and JavaScript. No frameworks and no build step. I used AI tools to help with parts of the design and code.

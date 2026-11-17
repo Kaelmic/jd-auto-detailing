@@ -1,8 +1,12 @@
+// JD Auto — parallax on load and on scroll.
+// Images drift inside their frames; hero text and panels lift away at a different speed.
+// Does nothing for people who prefer reduced motion.
 (() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
+    // frame: image moves inside its (overflow hidden) frame, relative to the viewport centre
+    // text:  element drifts with the scroll position, so it leaves the top at a different speed
     const targets = [
-        { sel: ".hero-minimal .hero-image img", speed: 0.07, frame: true },
         { sel: ".services-editorial-image img", speed: 0.07, frame: true },
         { sel: ".craftsmanship-image img", speed: 0.07, frame: true },
         { sel: ".svc-img img", speed: 0.07, frame: true },
@@ -20,7 +24,7 @@
             layers.push({ el, speed, frame: !!frame, host: frame ? el.parentElement : null });
         });
     });
-    const HEADROOM = 0.075; 
+    const HEADROOM = 0.075; // matches scale(1.15): 7.5% spare on each side
     let vh = window.innerHeight;
     let queued = false;
 
@@ -54,29 +58,33 @@
         update();
     }
 
+    // ---- Scroll reveal --------------------------------------------------------
+    // Each piece rises into place as it enters the screen. Text, rows and frames travel
+    // different distances, and pieces that arrive together are staggered, so the page
+    // builds up in layers instead of appearing all at once.
     if (!("IntersectionObserver" in window)) return;
 
     const reveals = [
-
+        // home
         { sel: ".services-editorial-content h2, .services-editorial-intro, .editorial-service", y: 36 },
         { sel: ".services-editorial-image, .craftsmanship-image, .comparison", frame: true },
         { sel: ".difference-heading, .difference-bottom, .difference-disclaimer", y: 36 },
         { sel: ".craftsmanship-content > *", y: 36 },
         { sel: ".cta-section > :not(.eyebrow)", y: 36 },
-
+        // about
         { sel: ".ab-order-intro > *, .ab-flow li, .ab-pair-note, .ab-wont h2, .ab-wont-list li", y: 40 },
         { sel: ".ab-fig img", frame: true },
-
+        // services
         { sel: ".svc-tag, .svc h2, .svc-lead, .svc dl, .svc .hero-book-link", y: 36 },
         { sel: ".svc-img", frame: true },
         { sel: ".page-split-intro > *, .choose li, .faq-list details", y: 36 },
-
+        // gallery
         { sel: ".gallery-toolbar, .gallery-disclaimer", y: 28 },
         { sel: ".gallery-item", y: 60 },
-
+        // contact
         { sel: ".contact-panel > h2, .contact-panel > .form-notice, .contact-form .field-row, .contact-form > label, .contact-form > button", y: 34 },
         { sel: ".contact-aside > h2, .contact-aside > h3, .contact-aside > p, .contact-steps > li, .map-wrap", y: 34 },
-
+        // shared closing line
         { sel: ".page-close h2, .page-close-links", y: 36 }
     ];
 
@@ -101,7 +109,7 @@
             el.style.setProperty("--rv-d", Math.min(n, 5) * 90 + "ms");
             n++;
             el.classList.add("is-in");
-
+            // hand the element back to its normal styles once it has arrived
             el.addEventListener("animationend", () => {
                 el.classList.remove("rv", "rv-frame", "is-in");
                 el.style.removeProperty("--rv-y");
